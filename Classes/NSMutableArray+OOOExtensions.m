@@ -1,8 +1,8 @@
 //
 // cooocoa - Copyright 2012 Three Rings Design
 
-#import "NSMutableArray+Extensions.h"
-#import "NSArray+Extensions.h"
+#import "NSMutableArray+OOOExtensions.h"
+#import "NSArray+OOOExtensions.h"
 #import "OOOUtils.h"
 
 @implementation NSMutableArray (OOOExtensions)

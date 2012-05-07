@@ -1,7 +1,7 @@
 //
 // cooocoa - Copyright 2012 Three Rings Design
 
-#import "NSString+Extensions.h"
+#import "NSString+OOOExtensions.h"
 
 @implementation NSString (OOOExtensions)
 

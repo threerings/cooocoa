@@ -4,10 +4,10 @@
 // Master include file for cooocoa
 
 // Categories
-#import "NSArray+Extensions.h"
-#import "NSMutableArray+Extensions.h"
-#import "NSString+Extensions.h"
-#import "UIColor+Extensions.h"
+#import "NSArray+OOOExtensions.h"
+#import "NSMutableArray+OOOExtensions.h"
+#import "NSString+OOOExtensions.h"
+#import "UIColor+OOOExtensions.h"
 
 // Utils
 #import "OOOCollections.h"
@@ -21,5 +21,5 @@
 
 // XML
 #import "GDataXMLNode.h"
-#import "GDataXMLNode+Extensions.h"
+#import "GDataXMLNode+OOOExtensions.h"
 #import "GDataXMLException.h"

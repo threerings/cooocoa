@@ -1,7 +1,7 @@
 //
 // cooocoa - Copyright 2012 Three Rings Design
 
-#import "NSArray+Extensions.h"
+#import "NSArray+OOOExtensions.h"
 #import "OOOUtils.h"
 #import "OOOCollections.h"
 

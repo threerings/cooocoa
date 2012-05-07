@@ -1,9 +1,9 @@
 //
 // cooocoa - Copyright 2012 Three Rings Design
 
-#import "GDataXMLNode+Extensions.h"
+#import "GDataXMLNode+OOOExtensions.h"
+#import "NSString+OOOExtensions.h"
 #import "GDataXMLException.h"
-#import "NSString+Extensions.h"
 #import "OOOEnum.h"
 
 @implementation GDataXMLElement (OOOExtensions)

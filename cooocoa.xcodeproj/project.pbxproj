@@ -11,14 +11,14 @@
 		229E27C31557473D001452E5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27C21557473D001452E5 /* SenTestingKit.framework */; };
 		229E27C61557473D001452E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27B41557473D001452E5 /* Foundation.framework */; };
 		229E27C91557473D001452E5 /* libcooocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27B11557473D001452E5 /* libcooocoa.a */; };
-		229E27FF155748C2001452E5 /* GDataXMLNode+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E27F5155748C2001452E5 /* GDataXMLNode+Extensions.h */; };
-		229E2800155748C2001452E5 /* GDataXMLNode+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E27F6155748C2001452E5 /* GDataXMLNode+Extensions.m */; };
-		229E2801155748C2001452E5 /* NSArray+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E27F7155748C2001452E5 /* NSArray+Extensions.h */; };
-		229E2802155748C2001452E5 /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E27F8155748C2001452E5 /* NSArray+Extensions.m */; };
-		229E2803155748C2001452E5 /* NSMutableArray+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E27F9155748C2001452E5 /* NSMutableArray+Extensions.h */; };
-		229E2804155748C2001452E5 /* NSMutableArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E27FA155748C2001452E5 /* NSMutableArray+Extensions.m */; };
-		229E2805155748C2001452E5 /* NSString+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E27FB155748C2001452E5 /* NSString+Extensions.h */; };
-		229E2806155748C2001452E5 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E27FC155748C2001452E5 /* NSString+Extensions.m */; };
+		229E27FF155748C2001452E5 /* GDataXMLNode+OOOExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E27F5155748C2001452E5 /* GDataXMLNode+OOOExtensions.h */; };
+		229E2800155748C2001452E5 /* GDataXMLNode+OOOExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E27F6155748C2001452E5 /* GDataXMLNode+OOOExtensions.m */; };
+		229E2801155748C2001452E5 /* NSArray+OOOExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E27F7155748C2001452E5 /* NSArray+OOOExtensions.h */; };
+		229E2802155748C2001452E5 /* NSArray+OOOExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E27F8155748C2001452E5 /* NSArray+OOOExtensions.m */; };
+		229E2803155748C2001452E5 /* NSMutableArray+OOOExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E27F9155748C2001452E5 /* NSMutableArray+OOOExtensions.h */; };
+		229E2804155748C2001452E5 /* NSMutableArray+OOOExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E27FA155748C2001452E5 /* NSMutableArray+OOOExtensions.m */; };
+		229E2805155748C2001452E5 /* NSString+OOOExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E27FB155748C2001452E5 /* NSString+OOOExtensions.h */; };
+		229E2806155748C2001452E5 /* NSString+OOOExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E27FC155748C2001452E5 /* NSString+OOOExtensions.m */; };
 		229E280B155748F5001452E5 /* cooocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E280A155748F5001452E5 /* cooocoaTests.m */; };
 		229E28101557494C001452E5 /* GDataXMLException.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E280C1557494C001452E5 /* GDataXMLException.h */; };
 		229E28111557494C001452E5 /* GDataXMLException.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E280D1557494C001452E5 /* GDataXMLException.m */; };
@@ -36,8 +36,8 @@
 		229E2829155749A6001452E5 /* OOOWeightedArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E281E155749A6001452E5 /* OOOWeightedArray.h */; };
 		229E282A155749A6001452E5 /* OOOWeightedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E281F155749A6001452E5 /* OOOWeightedArray.m */; };
 		229E282D15574DE5001452E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E282C15574DE4001452E5 /* UIKit.framework */; };
-		229E283015574E05001452E5 /* UIColor+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E282E15574E05001452E5 /* UIColor+Extensions.h */; };
-		229E283115574E05001452E5 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E282F15574E05001452E5 /* UIColor+Extensions.m */; };
+		229E283015574E05001452E5 /* UIColor+OOOExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E282E15574E05001452E5 /* UIColor+OOOExtensions.h */; };
+		229E283115574E05001452E5 /* UIColor+OOOExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E282F15574E05001452E5 /* UIColor+OOOExtensions.m */; };
 		229E283415574E87001452E5 /* cooocoa_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 229E283315574E87001452E5 /* cooocoa_Prefix.pch */; };
 		22E7697A15575C8A006E96DB /* OOOFloatRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E7697615575C8A006E96DB /* OOOFloatRange.h */; };
 		22E7697B15575C8A006E96DB /* OOOFloatRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7697715575C8A006E96DB /* OOOFloatRange.m */; };
@@ -60,14 +60,14 @@
 		229E27B41557473D001452E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		229E27C11557473D001452E5 /* cooocoaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cooocoaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		229E27C21557473D001452E5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		229E27F5155748C2001452E5 /* GDataXMLNode+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GDataXMLNode+Extensions.h"; sourceTree = "<group>"; };
-		229E27F6155748C2001452E5 /* GDataXMLNode+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GDataXMLNode+Extensions.m"; sourceTree = "<group>"; };
-		229E27F7155748C2001452E5 /* NSArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extensions.h"; sourceTree = "<group>"; };
-		229E27F8155748C2001452E5 /* NSArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extensions.m"; sourceTree = "<group>"; };
-		229E27F9155748C2001452E5 /* NSMutableArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Extensions.h"; sourceTree = "<group>"; };
-		229E27FA155748C2001452E5 /* NSMutableArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Extensions.m"; sourceTree = "<group>"; };
-		229E27FB155748C2001452E5 /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
-		229E27FC155748C2001452E5 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
+		229E27F5155748C2001452E5 /* GDataXMLNode+OOOExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GDataXMLNode+OOOExtensions.h"; sourceTree = "<group>"; };
+		229E27F6155748C2001452E5 /* GDataXMLNode+OOOExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GDataXMLNode+OOOExtensions.m"; sourceTree = "<group>"; };
+		229E27F7155748C2001452E5 /* NSArray+OOOExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+OOOExtensions.h"; sourceTree = "<group>"; };
+		229E27F8155748C2001452E5 /* NSArray+OOOExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+OOOExtensions.m"; sourceTree = "<group>"; };
+		229E27F9155748C2001452E5 /* NSMutableArray+OOOExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+OOOExtensions.h"; sourceTree = "<group>"; };
+		229E27FA155748C2001452E5 /* NSMutableArray+OOOExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+OOOExtensions.m"; sourceTree = "<group>"; };
+		229E27FB155748C2001452E5 /* NSString+OOOExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+OOOExtensions.h"; sourceTree = "<group>"; };
+		229E27FC155748C2001452E5 /* NSString+OOOExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+OOOExtensions.m"; sourceTree = "<group>"; };
 		229E2809155748F5001452E5 /* cooocoaTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cooocoaTests.h; sourceTree = "<group>"; };
 		229E280A155748F5001452E5 /* cooocoaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cooocoaTests.m; sourceTree = "<group>"; };
 		229E280C1557494C001452E5 /* GDataXMLException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLException.h; sourceTree = "<group>"; };
@@ -87,8 +87,8 @@
 		229E281F155749A6001452E5 /* OOOWeightedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOWeightedArray.m; sourceTree = "<group>"; };
 		229E282B15574CF3001452E5 /* cooocoa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cooocoa.h; sourceTree = "<group>"; };
 		229E282C15574DE4001452E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		229E282E15574E05001452E5 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
-		229E282F15574E05001452E5 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
+		229E282E15574E05001452E5 /* UIColor+OOOExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+OOOExtensions.h"; sourceTree = "<group>"; };
+		229E282F15574E05001452E5 /* UIColor+OOOExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+OOOExtensions.m"; sourceTree = "<group>"; };
 		229E283315574E87001452E5 /* cooocoa_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cooocoa_Prefix.pch; sourceTree = "<group>"; };
 		22E7697615575C8A006E96DB /* OOOFloatRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOFloatRange.h; sourceTree = "<group>"; };
 		22E7697715575C8A006E96DB /* OOOFloatRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOFloatRange.m; sourceTree = "<group>"; };
@@ -172,14 +172,14 @@
 		229E27F31557489B001452E5 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				229E27F7155748C2001452E5 /* NSArray+Extensions.h */,
-				229E27F8155748C2001452E5 /* NSArray+Extensions.m */,
-				229E27F9155748C2001452E5 /* NSMutableArray+Extensions.h */,
-				229E27FA155748C2001452E5 /* NSMutableArray+Extensions.m */,
-				229E27FB155748C2001452E5 /* NSString+Extensions.h */,
-				229E27FC155748C2001452E5 /* NSString+Extensions.m */,
-				229E282E15574E05001452E5 /* UIColor+Extensions.h */,
-				229E282F15574E05001452E5 /* UIColor+Extensions.m */,
+				229E27F7155748C2001452E5 /* NSArray+OOOExtensions.h */,
+				229E27F8155748C2001452E5 /* NSArray+OOOExtensions.m */,
+				229E27F9155748C2001452E5 /* NSMutableArray+OOOExtensions.h */,
+				229E27FA155748C2001452E5 /* NSMutableArray+OOOExtensions.m */,
+				229E27FB155748C2001452E5 /* NSString+OOOExtensions.h */,
+				229E27FC155748C2001452E5 /* NSString+OOOExtensions.m */,
+				229E282E15574E05001452E5 /* UIColor+OOOExtensions.h */,
+				229E282F15574E05001452E5 /* UIColor+OOOExtensions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -187,8 +187,8 @@
 		229E27F4155748A2001452E5 /* XML */ = {
 			isa = PBXGroup;
 			children = (
-				229E27F5155748C2001452E5 /* GDataXMLNode+Extensions.h */,
-				229E27F6155748C2001452E5 /* GDataXMLNode+Extensions.m */,
+				229E27F5155748C2001452E5 /* GDataXMLNode+OOOExtensions.h */,
+				229E27F6155748C2001452E5 /* GDataXMLNode+OOOExtensions.m */,
 				229E280C1557494C001452E5 /* GDataXMLException.h */,
 				229E280D1557494C001452E5 /* GDataXMLException.m */,
 				229E280E1557494C001452E5 /* GDataXMLNode.h */,
@@ -234,10 +234,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				229E27FF155748C2001452E5 /* GDataXMLNode+Extensions.h in Headers */,
-				229E2801155748C2001452E5 /* NSArray+Extensions.h in Headers */,
-				229E2803155748C2001452E5 /* NSMutableArray+Extensions.h in Headers */,
-				229E2805155748C2001452E5 /* NSString+Extensions.h in Headers */,
+				229E27FF155748C2001452E5 /* GDataXMLNode+OOOExtensions.h in Headers */,
+				229E2801155748C2001452E5 /* NSArray+OOOExtensions.h in Headers */,
+				229E2803155748C2001452E5 /* NSMutableArray+OOOExtensions.h in Headers */,
+				229E2805155748C2001452E5 /* NSString+OOOExtensions.h in Headers */,
 				229E28101557494C001452E5 /* GDataXMLException.h in Headers */,
 				229E28121557494C001452E5 /* GDataXMLNode.h in Headers */,
 				229E2820155749A6001452E5 /* OOOCollections.h in Headers */,
@@ -246,7 +246,7 @@
 				229E2825155749A6001452E5 /* OOORandoms.h in Headers */,
 				229E2827155749A6001452E5 /* OOOUtils.h in Headers */,
 				229E2829155749A6001452E5 /* OOOWeightedArray.h in Headers */,
-				229E283015574E05001452E5 /* UIColor+Extensions.h in Headers */,
+				229E283015574E05001452E5 /* UIColor+OOOExtensions.h in Headers */,
 				229E283415574E87001452E5 /* cooocoa_Prefix.pch in Headers */,
 				22E7697A15575C8A006E96DB /* OOOFloatRange.h in Headers */,
 				22E7697C15575C8A006E96DB /* OOOIntRange.h in Headers */,
@@ -349,10 +349,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				229E2800155748C2001452E5 /* GDataXMLNode+Extensions.m in Sources */,
-				229E2802155748C2001452E5 /* NSArray+Extensions.m in Sources */,
-				229E2804155748C2001452E5 /* NSMutableArray+Extensions.m in Sources */,
-				229E2806155748C2001452E5 /* NSString+Extensions.m in Sources */,
+				229E2800155748C2001452E5 /* GDataXMLNode+OOOExtensions.m in Sources */,
+				229E2802155748C2001452E5 /* NSArray+OOOExtensions.m in Sources */,
+				229E2804155748C2001452E5 /* NSMutableArray+OOOExtensions.m in Sources */,
+				229E2806155748C2001452E5 /* NSString+OOOExtensions.m in Sources */,
 				229E28111557494C001452E5 /* GDataXMLException.m in Sources */,
 				229E28131557494C001452E5 /* GDataXMLNode.m in Sources */,
 				229E2821155749A6001452E5 /* OOOCollections.m in Sources */,
@@ -360,7 +360,7 @@
 				229E2826155749A6001452E5 /* OOORandoms.m in Sources */,
 				229E2828155749A6001452E5 /* OOOUtils.m in Sources */,
 				229E282A155749A6001452E5 /* OOOWeightedArray.m in Sources */,
-				229E283115574E05001452E5 /* UIColor+Extensions.m in Sources */,
+				229E283115574E05001452E5 /* UIColor+OOOExtensions.m in Sources */,
 				22E7697B15575C8A006E96DB /* OOOFloatRange.m in Sources */,
 				22E7697D15575C8A006E96DB /* OOOIntRange.m in Sources */,
 			);

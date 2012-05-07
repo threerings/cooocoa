@@ -1,7 +1,7 @@
 //
 // Betwixt - Copyright 2012 Three Rings Design
 
-#import "UIColor+Extensions.h"
+#import "UIColor+OOOExtensions.h"
 
 #define OOO_COLOR_PART_ALPHA(color)  (((color) >> 24) & 0xff)
 #define OOO_COLOR_PART_RED(color)    (((color) >> 16) & 0xff)

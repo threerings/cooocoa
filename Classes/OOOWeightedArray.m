@@ -3,7 +3,7 @@
 
 #import "OOOWeightedArray.h"
 #import "OOORandoms.h"
-#import "NSArray+Extensions.h"
+#import "NSArray+OOOExtensions.h"
 
 @interface WeightedObject : NSObject
 @property (readonly) id obj;
