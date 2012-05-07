@@ -39,6 +39,10 @@
 		229E283015574E05001452E5 /* UIColor+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E282E15574E05001452E5 /* UIColor+Extensions.h */; };
 		229E283115574E05001452E5 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E282F15574E05001452E5 /* UIColor+Extensions.m */; };
 		229E283415574E87001452E5 /* cooocoa_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 229E283315574E87001452E5 /* cooocoa_Prefix.pch */; };
+		22E7697A15575C8A006E96DB /* OOOFloatRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E7697615575C8A006E96DB /* OOOFloatRange.h */; };
+		22E7697B15575C8A006E96DB /* OOOFloatRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7697715575C8A006E96DB /* OOOFloatRange.m */; };
+		22E7697C15575C8A006E96DB /* OOOIntRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E7697815575C8A006E96DB /* OOOIntRange.h */; };
+		22E7697D15575C8A006E96DB /* OOOIntRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7697915575C8A006E96DB /* OOOIntRange.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,10 @@
 		229E282E15574E05001452E5 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
 		229E282F15574E05001452E5 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
 		229E283315574E87001452E5 /* cooocoa_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cooocoa_Prefix.pch; sourceTree = "<group>"; };
+		22E7697615575C8A006E96DB /* OOOFloatRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOFloatRange.h; sourceTree = "<group>"; };
+		22E7697715575C8A006E96DB /* OOOFloatRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOFloatRange.m; sourceTree = "<group>"; };
+		22E7697815575C8A006E96DB /* OOOIntRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOIntRange.h; sourceTree = "<group>"; };
+		22E7697915575C8A006E96DB /* OOOIntRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOIntRange.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +204,10 @@
 				229E2816155749A6001452E5 /* OOOCollections.m */,
 				229E2817155749A6001452E5 /* OOOEnum.h */,
 				229E2818155749A6001452E5 /* OOOEnum.m */,
+				22E7697615575C8A006E96DB /* OOOFloatRange.h */,
+				22E7697715575C8A006E96DB /* OOOFloatRange.m */,
+				22E7697815575C8A006E96DB /* OOOIntRange.h */,
+				22E7697915575C8A006E96DB /* OOOIntRange.m */,
 				229E2819155749A6001452E5 /* OOOMacros.h */,
 				229E281A155749A6001452E5 /* OOORandoms.h */,
 				229E281B155749A6001452E5 /* OOORandoms.m */,
@@ -236,6 +248,8 @@
 				229E2829155749A6001452E5 /* OOOWeightedArray.h in Headers */,
 				229E283015574E05001452E5 /* UIColor+Extensions.h in Headers */,
 				229E283415574E87001452E5 /* cooocoa_Prefix.pch in Headers */,
+				22E7697A15575C8A006E96DB /* OOOFloatRange.h in Headers */,
+				22E7697C15575C8A006E96DB /* OOOIntRange.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +361,8 @@
 				229E2828155749A6001452E5 /* OOOUtils.m in Sources */,
 				229E282A155749A6001452E5 /* OOOWeightedArray.m in Sources */,
 				229E283115574E05001452E5 /* UIColor+Extensions.m in Sources */,
+				22E7697B15575C8A006E96DB /* OOOFloatRange.m in Sources */,
+				22E7697D15575C8A006E96DB /* OOOIntRange.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

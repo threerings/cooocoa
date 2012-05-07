@@ -12,6 +12,8 @@
 // Utils
 #import "OOOCollections.h"
 #import "OOOEnum.h"
+#import "OOOFloatRange.h"
+#import "OOOIntRange.h"
 #import "OOOMacros.h"
 #import "OOORandoms.h"
 #import "OOOUtils.h"
