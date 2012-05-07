@@ -1,7 +1,7 @@
 //
-// Prefix header for all source files of the 'cooocoa' target in the 'cooocoa' project
-//
+// cooocoa - Copyright 2012 Three Rings Design
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
 #endif
