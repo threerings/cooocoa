@@ -1,8 +1,8 @@
 //
 // cooocoa - Copyright 2012 Three Rings Design
 
-#import "BTWeightedArray.h"
-#import "BTRandoms.h"
+#import "OOOWeightedArray.h"
+#import "OOORandoms.h"
 #import "NSArray+Extensions.h"
 
 @interface WeightedObject : NSObject
@@ -35,9 +35,9 @@
 
 @end
 
-@implementation BTWeightedArray
+@implementation OOOWeightedArray
 
-- (id)initWithRands:(BTRandoms*)rands {
+- (id)initWithRands:(OOORandoms*)rands {
     if (!(self = [super init])) {
         return nil;
     }

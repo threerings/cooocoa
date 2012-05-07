@@ -1,10 +1,10 @@
 //
 // cooocoa - Copyright 2012 Three Rings Design
 
-#import "BTCollections.h"
-#import "BTUtils.h"
+#import "OOOCollections.h"
+#import "OOOUtils.h"
 
-@implementation BTCollections
+@implementation OOOCollections
 
 + (NSMutableArray*)filter:(id<NSFastEnumeration>)collection pred:(BOOL (^)(id))pred {
     NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -19,7 +19,7 @@
 + (NSMutableArray*)map:(id<NSFastEnumeration>)collection transformer:(id (^)(id))transformer {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     for (id obj in collection) {
-        [array addObject:BTNilToNSNull(transformer(obj))];
+        [array addObject:OOONilToNSNull(transformer(obj))];
     }
     return array;
 }

@@ -1,17 +1,17 @@
 //
 // cooocoa - Copyright 2012 Three Rings Design
 
-@class BTRandoms;
+@class OOORandoms;
 
-@interface BTWeightedArray : NSObject {
-    BTRandoms* _rands;
+@interface OOOWeightedArray : NSObject {
+    OOORandoms* _rands;
     NSMutableArray* _objects;
     BOOL _dirty;
 }
 
 @property (readonly) int count;
 
-- (id)initWithRands:(BTRandoms*)rands;
+- (id)initWithRands:(OOORandoms*)rands;
 - (void)addObject:(id)object withWeight:(float)weight;
 - (id)nextObject;
 - (NSArray*)allObjects;

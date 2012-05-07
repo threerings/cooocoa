@@ -1,7 +1,7 @@
 //
 // cooocoa - Copyright 2012 Three Rings Design
 
-#import "BTRandoms.h"
+#import "OOORandoms.h"
 
 /* 
  A C-program for MT19937, with initialization improved 2002/1/26.
@@ -57,7 +57,7 @@
 #define UPPER_MASK 0x80000000UL /* most significant w-r bits */
 #define LOWER_MASK 0x7fffffffUL /* least significant r bits */
 
-@interface BTRandoms () {
+@interface OOORandoms () {
     unsigned long mt[N]; /* the array for the state vector  */
     int mti;//=N+1; /* mti==N+1 means mt[N] is not initialized */
 }
@@ -70,7 +70,7 @@
 - (double)gendrand_res53;
 @end
 
-@implementation BTRandoms
+@implementation OOORandoms
 
 - (id)init {
     if (!(self = [super init])) {

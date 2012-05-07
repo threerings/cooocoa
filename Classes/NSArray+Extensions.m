@@ -2,21 +2,21 @@
 // cooocoa - Copyright 2012 Three Rings Design
 
 #import "NSArray+Extensions.h"
-#import "BTUtils.h"
-#import "BTCollections.h"
+#import "OOOUtils.h"
+#import "OOOCollections.h"
 
 @implementation NSArray (OOOExtensions)
 
 - (NSMutableArray*)filter:(BOOL (^)(id))pred {
-    return [BTCollections filter:self pred:pred];
+    return [OOOCollections filter:self pred:pred];
 }
 
 - (NSMutableArray*)map:(id (^)(id))transformer {
-    return [BTCollections map:self transformer:transformer];
+    return [OOOCollections map:self transformer:transformer];
 }
 
 - (id)findObject:(BOOL (^)(id))pred {
-    return [BTCollections findObject:self pred:pred];
+    return [OOOCollections findObject:self pred:pred];
 }
 
 - (int)binarySearch:(id)object offset:(int)offset length:(int)length comp:(NSComparator)comp {

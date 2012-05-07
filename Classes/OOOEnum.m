@@ -1,23 +1,23 @@
 //
 // cooocoa - Copyright 2012 Three Rings Design
 
-#import "BTEnum.h"
+#import "OOOEnum.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 
-@interface BTEnum ()
+@interface OOOEnum ()
 + (NSMutableDictionary*)enums;
 + (NSMutableSet*)blocked;
 @end
 
-@implementation BTEnum {
+@implementation OOOEnum {
     NSString* _name;
 }
 
 @synthesize name = _name;
 
 + (id)valueOf:(NSString*)name {
-    for (BTEnum* theEnum in [self values]) {
+    for (OOOEnum* theEnum in [self values]) {
         if ([theEnum.name isEqualToString:name]) {
             return theEnum;
         }
@@ -26,7 +26,7 @@
 }
 
 + (NSArray*)values {
-    return [[BTEnum enums] objectForKey:[self class]];
+    return [[OOOEnum enums] objectForKey:[self class]];
 }
 
 - (id)init {
@@ -34,14 +34,14 @@
         return nil;
     }
     Class clazz = [self class];
-    if ([[BTEnum blocked] containsObject:clazz]) {
+    if ([[OOOEnum blocked] containsObject:clazz]) {
         [NSException raise:NSGenericException format:@"You may not just construct an enum!"];
     }
     
-    NSMutableArray* array = [[BTEnum enums] objectForKey:clazz];
+    NSMutableArray* array = [[OOOEnum enums] objectForKey:clazz];
     if (array == nil) {
         array = [NSMutableArray array];
-        [[BTEnum enums] setObject:array forKey:clazz];
+        [[OOOEnum enums] setObject:array forKey:clazz];
     }
     [array addObject:self];
     return self;
@@ -89,9 +89,9 @@
 }
 
 + (void)initialize {
-    static NSString* PREFIX = @"BTEnum_Init";
+    static NSString* PREFIX = @"OOOEnum_Init";
     
-    if (self != [BTEnum class]) {
+    if (self != [OOOEnum class]) {
         // walk the class methods 
         unsigned int methodCount = 0;
         Method* mlist = class_copyMethodList(object_getClass(self), &methodCount);
@@ -106,7 +106,7 @@
         free(mlist);
     }
         
-    [[BTEnum blocked] addObject:self];
+    [[OOOEnum blocked] addObject:self];
 }
 
 @end

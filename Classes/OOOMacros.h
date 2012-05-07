@@ -1,7 +1,7 @@
 //
 // cooocoa - Copyright 2012 Three Rings Design
 
-#define BT_VARARGS_TO_ARRAY(type, first) ({ \
+#define OOO_VARARGS_TO_ARRAY(type, first) ({ \
     va_list ap; \
     va_start(ap, child); \
     NSMutableArray* children = [[NSMutableArray alloc] init]; \

@@ -25,17 +25,17 @@
 		229E28111557494C001452E5 /* GDataXMLException.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E280D1557494C001452E5 /* GDataXMLException.m */; };
 		229E28121557494C001452E5 /* GDataXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E280E1557494C001452E5 /* GDataXMLNode.h */; };
 		229E28131557494C001452E5 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E280F1557494C001452E5 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		229E2820155749A6001452E5 /* BTCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E2815155749A6001452E5 /* BTCollections.h */; };
-		229E2821155749A6001452E5 /* BTCollections.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E2816155749A6001452E5 /* BTCollections.m */; };
-		229E2822155749A6001452E5 /* BTEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E2817155749A6001452E5 /* BTEnum.h */; };
-		229E2823155749A6001452E5 /* BTEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E2818155749A6001452E5 /* BTEnum.m */; };
-		229E2824155749A6001452E5 /* BTMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E2819155749A6001452E5 /* BTMacros.h */; };
-		229E2825155749A6001452E5 /* BTRandoms.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E281A155749A6001452E5 /* BTRandoms.h */; };
-		229E2826155749A6001452E5 /* BTRandoms.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E281B155749A6001452E5 /* BTRandoms.m */; };
-		229E2827155749A6001452E5 /* BTUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E281C155749A6001452E5 /* BTUtils.h */; };
-		229E2828155749A6001452E5 /* BTUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E281D155749A6001452E5 /* BTUtils.m */; };
-		229E2829155749A6001452E5 /* BTWeightedArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E281E155749A6001452E5 /* BTWeightedArray.h */; };
-		229E282A155749A6001452E5 /* BTWeightedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E281F155749A6001452E5 /* BTWeightedArray.m */; };
+		229E2820155749A6001452E5 /* OOOCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E2815155749A6001452E5 /* OOOCollections.h */; };
+		229E2821155749A6001452E5 /* OOOCollections.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E2816155749A6001452E5 /* OOOCollections.m */; };
+		229E2822155749A6001452E5 /* OOOEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E2817155749A6001452E5 /* OOOEnum.h */; };
+		229E2823155749A6001452E5 /* OOOEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E2818155749A6001452E5 /* OOOEnum.m */; };
+		229E2824155749A6001452E5 /* OOOMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E2819155749A6001452E5 /* OOOMacros.h */; };
+		229E2825155749A6001452E5 /* OOORandoms.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E281A155749A6001452E5 /* OOORandoms.h */; };
+		229E2826155749A6001452E5 /* OOORandoms.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E281B155749A6001452E5 /* OOORandoms.m */; };
+		229E2827155749A6001452E5 /* OOOUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E281C155749A6001452E5 /* OOOUtils.h */; };
+		229E2828155749A6001452E5 /* OOOUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E281D155749A6001452E5 /* OOOUtils.m */; };
+		229E2829155749A6001452E5 /* OOOWeightedArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E281E155749A6001452E5 /* OOOWeightedArray.h */; };
+		229E282A155749A6001452E5 /* OOOWeightedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E281F155749A6001452E5 /* OOOWeightedArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,17 +68,17 @@
 		229E280D1557494C001452E5 /* GDataXMLException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLException.m; sourceTree = "<group>"; };
 		229E280E1557494C001452E5 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		229E280F1557494C001452E5 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
-		229E2815155749A6001452E5 /* BTCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCollections.h; sourceTree = "<group>"; };
-		229E2816155749A6001452E5 /* BTCollections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCollections.m; sourceTree = "<group>"; };
-		229E2817155749A6001452E5 /* BTEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTEnum.h; sourceTree = "<group>"; };
-		229E2818155749A6001452E5 /* BTEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTEnum.m; sourceTree = "<group>"; };
-		229E2819155749A6001452E5 /* BTMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTMacros.h; sourceTree = "<group>"; };
-		229E281A155749A6001452E5 /* BTRandoms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRandoms.h; sourceTree = "<group>"; };
-		229E281B155749A6001452E5 /* BTRandoms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRandoms.m; sourceTree = "<group>"; };
-		229E281C155749A6001452E5 /* BTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTUtils.h; sourceTree = "<group>"; };
-		229E281D155749A6001452E5 /* BTUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTUtils.m; sourceTree = "<group>"; };
-		229E281E155749A6001452E5 /* BTWeightedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTWeightedArray.h; sourceTree = "<group>"; };
-		229E281F155749A6001452E5 /* BTWeightedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTWeightedArray.m; sourceTree = "<group>"; };
+		229E2815155749A6001452E5 /* OOOCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOCollections.h; sourceTree = "<group>"; };
+		229E2816155749A6001452E5 /* OOOCollections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOCollections.m; sourceTree = "<group>"; };
+		229E2817155749A6001452E5 /* OOOEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOEnum.h; sourceTree = "<group>"; };
+		229E2818155749A6001452E5 /* OOOEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOEnum.m; sourceTree = "<group>"; };
+		229E2819155749A6001452E5 /* OOOMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOMacros.h; sourceTree = "<group>"; };
+		229E281A155749A6001452E5 /* OOORandoms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOORandoms.h; sourceTree = "<group>"; };
+		229E281B155749A6001452E5 /* OOORandoms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOORandoms.m; sourceTree = "<group>"; };
+		229E281C155749A6001452E5 /* OOOUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOUtils.h; sourceTree = "<group>"; };
+		229E281D155749A6001452E5 /* OOOUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOUtils.m; sourceTree = "<group>"; };
+		229E281E155749A6001452E5 /* OOOWeightedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOWeightedArray.h; sourceTree = "<group>"; };
+		229E281F155749A6001452E5 /* OOOWeightedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOWeightedArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,17 +181,17 @@
 		229E281415574972001452E5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				229E2815155749A6001452E5 /* BTCollections.h */,
-				229E2816155749A6001452E5 /* BTCollections.m */,
-				229E2817155749A6001452E5 /* BTEnum.h */,
-				229E2818155749A6001452E5 /* BTEnum.m */,
-				229E2819155749A6001452E5 /* BTMacros.h */,
-				229E281A155749A6001452E5 /* BTRandoms.h */,
-				229E281B155749A6001452E5 /* BTRandoms.m */,
-				229E281C155749A6001452E5 /* BTUtils.h */,
-				229E281D155749A6001452E5 /* BTUtils.m */,
-				229E281E155749A6001452E5 /* BTWeightedArray.h */,
-				229E281F155749A6001452E5 /* BTWeightedArray.m */,
+				229E2815155749A6001452E5 /* OOOCollections.h */,
+				229E2816155749A6001452E5 /* OOOCollections.m */,
+				229E2817155749A6001452E5 /* OOOEnum.h */,
+				229E2818155749A6001452E5 /* OOOEnum.m */,
+				229E2819155749A6001452E5 /* OOOMacros.h */,
+				229E281A155749A6001452E5 /* OOORandoms.h */,
+				229E281B155749A6001452E5 /* OOORandoms.m */,
+				229E281C155749A6001452E5 /* OOOUtils.h */,
+				229E281D155749A6001452E5 /* OOOUtils.m */,
+				229E281E155749A6001452E5 /* OOOWeightedArray.h */,
+				229E281F155749A6001452E5 /* OOOWeightedArray.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -209,12 +209,12 @@
 				229E2805155748C2001452E5 /* NSString+Extensions.h in Headers */,
 				229E28101557494C001452E5 /* GDataXMLException.h in Headers */,
 				229E28121557494C001452E5 /* GDataXMLNode.h in Headers */,
-				229E2820155749A6001452E5 /* BTCollections.h in Headers */,
-				229E2822155749A6001452E5 /* BTEnum.h in Headers */,
-				229E2824155749A6001452E5 /* BTMacros.h in Headers */,
-				229E2825155749A6001452E5 /* BTRandoms.h in Headers */,
-				229E2827155749A6001452E5 /* BTUtils.h in Headers */,
-				229E2829155749A6001452E5 /* BTWeightedArray.h in Headers */,
+				229E2820155749A6001452E5 /* OOOCollections.h in Headers */,
+				229E2822155749A6001452E5 /* OOOEnum.h in Headers */,
+				229E2824155749A6001452E5 /* OOOMacros.h in Headers */,
+				229E2825155749A6001452E5 /* OOORandoms.h in Headers */,
+				229E2827155749A6001452E5 /* OOOUtils.h in Headers */,
+				229E2829155749A6001452E5 /* OOOWeightedArray.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,11 +320,11 @@
 				229E2806155748C2001452E5 /* NSString+Extensions.m in Sources */,
 				229E28111557494C001452E5 /* GDataXMLException.m in Sources */,
 				229E28131557494C001452E5 /* GDataXMLNode.m in Sources */,
-				229E2821155749A6001452E5 /* BTCollections.m in Sources */,
-				229E2823155749A6001452E5 /* BTEnum.m in Sources */,
-				229E2826155749A6001452E5 /* BTRandoms.m in Sources */,
-				229E2828155749A6001452E5 /* BTUtils.m in Sources */,
-				229E282A155749A6001452E5 /* BTWeightedArray.m in Sources */,
+				229E2821155749A6001452E5 /* OOOCollections.m in Sources */,
+				229E2823155749A6001452E5 /* OOOEnum.m in Sources */,
+				229E2826155749A6001452E5 /* OOORandoms.m in Sources */,
+				229E2828155749A6001452E5 /* OOOUtils.m in Sources */,
+				229E282A155749A6001452E5 /* OOOWeightedArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

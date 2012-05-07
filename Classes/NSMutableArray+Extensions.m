@@ -3,14 +3,14 @@
 
 #import "NSMutableArray+Extensions.h"
 #import "NSArray+Extensions.h"
-#import "BTUtils.h"
+#import "OOOUtils.h"
 
 @implementation NSMutableArray (OOOExtensions)
 
 + (NSMutableArray*)arrayFromEnumeration:(id<NSFastEnumeration>)e {
     NSMutableArray* array = [[NSMutableArray alloc] init];
     for (id obj in e) {
-        [array addObject:BTNilToNSNull(obj)];
+        [array addObject:OOONilToNSNull(obj)];
     }
     return array;
 }

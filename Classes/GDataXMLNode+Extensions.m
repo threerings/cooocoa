@@ -4,7 +4,7 @@
 #import "GDataXMLNode+Extensions.h"
 #import "GDataXMLException.h"
 #import "NSString+Extensions.h"
-#import "BTEnum.h"
+#import "OOOEnum.h"
 
 @implementation GDataXMLElement (OOOExtensions)
 
@@ -108,7 +108,7 @@
     return [self boolAttribute:name defaultVal:0 required:YES];
 }
 
-- (id)enumAttribute:(NSString*)name type:(__unsafe_unretained Class)type defaultVal:(BTEnum*)defaultVal required:(BOOL)required {
+- (id)enumAttribute:(NSString*)name type:(__unsafe_unretained Class)type defaultVal:(OOOEnum*)defaultVal required:(BOOL)required {
     NSString* attr = [self getAttr:name required:required];
     if (attr == nil) return defaultVal;
     id theEnum = [type valueOf:attr];
@@ -119,7 +119,7 @@
     return theEnum;
 }
 
-- (id)enumAttribute:(NSString*)name type:(Class)type defaultVal:(BTEnum*)defaultVal {
+- (id)enumAttribute:(NSString*)name type:(Class)type defaultVal:(OOOEnum*)defaultVal {
     return [self enumAttribute:name type:type defaultVal:defaultVal required:NO];
 }
 

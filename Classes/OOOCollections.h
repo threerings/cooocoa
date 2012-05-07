@@ -3,7 +3,7 @@
 
 /// Utility functions for collections
 
-@interface BTCollections : NSObject
+@interface OOOCollections : NSObject
 
 + (NSMutableArray*)filter:(id<NSFastEnumeration>)collection pred:(BOOL (^)(id object))pred;
 + (NSMutableArray*)map:(id<NSFastEnumeration>)collection transformer:(id (^)(id object))transformer;

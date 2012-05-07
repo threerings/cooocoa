@@ -3,7 +3,7 @@
 
 #import "GDataXMLNode.h"
 
-@class BTEnum;
+@class OOOEnum;
 
 @interface GDataXMLElement (OOOExtensions)
 
@@ -20,7 +20,7 @@
 - (int)intAttribute:(NSString*)name;
 - (BOOL)boolAttribute:(NSString*)name defaultVal:(BOOL)defaultVal;
 - (BOOL)boolAttribute:(NSString*)name;
-- (id)enumAttribute:(NSString*)name type:(Class)type defaultVal:(BTEnum*)defaultVal;
+- (id)enumAttribute:(NSString*)name type:(Class)type defaultVal:(OOOEnum*)defaultVal;
 - (id)enumAttribute:(NSString*)name type:(Class)type;
 
 - (GDataXMLElement*)requireChild:(NSString*)path;
