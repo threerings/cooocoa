@@ -79,6 +79,7 @@
 		229E281D155749A6001452E5 /* OOOUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOUtils.m; sourceTree = "<group>"; };
 		229E281E155749A6001452E5 /* OOOWeightedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOWeightedArray.h; sourceTree = "<group>"; };
 		229E281F155749A6001452E5 /* OOOWeightedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOWeightedArray.m; sourceTree = "<group>"; };
+		229E282B15574CF3001452E5 /* cooocoa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cooocoa.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,8 +137,9 @@
 		229E27DE155747CC001452E5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				229E281415574972001452E5 /* Utils */,
+				229E282B15574CF3001452E5 /* cooocoa.h */,
 				229E27F31557489B001452E5 /* Categories */,
+				229E281415574972001452E5 /* Utils */,
 				229E27F4155748A2001452E5 /* XML */,
 			);
 			path = Classes;
