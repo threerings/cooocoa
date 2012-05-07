@@ -1,10 +1,5 @@
 //
-//  cooocoaTests.m
-//  cooocoaTests
-//
-//  Created by Tim Conkling on 5/6/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
+// cooocoa - Copyright 2012 Three Rings Design
 
 #import "cooocoaTests.h"
 
