@@ -12,7 +12,30 @@
 		229E27C51557473D001452E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27C41557473D001452E5 /* UIKit.framework */; };
 		229E27C61557473D001452E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27B41557473D001452E5 /* Foundation.framework */; };
 		229E27C91557473D001452E5 /* libcooocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27B11557473D001452E5 /* libcooocoa.a */; };
-		229E27E3155747EE001452E5 /* cooocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E27E2155747EE001452E5 /* cooocoaTests.m */; };
+		229E27FF155748C2001452E5 /* GDataXMLNode+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E27F5155748C2001452E5 /* GDataXMLNode+Extensions.h */; };
+		229E2800155748C2001452E5 /* GDataXMLNode+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E27F6155748C2001452E5 /* GDataXMLNode+Extensions.m */; };
+		229E2801155748C2001452E5 /* NSArray+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E27F7155748C2001452E5 /* NSArray+Extensions.h */; };
+		229E2802155748C2001452E5 /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E27F8155748C2001452E5 /* NSArray+Extensions.m */; };
+		229E2803155748C2001452E5 /* NSMutableArray+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E27F9155748C2001452E5 /* NSMutableArray+Extensions.h */; };
+		229E2804155748C2001452E5 /* NSMutableArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E27FA155748C2001452E5 /* NSMutableArray+Extensions.m */; };
+		229E2805155748C2001452E5 /* NSString+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E27FB155748C2001452E5 /* NSString+Extensions.h */; };
+		229E2806155748C2001452E5 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E27FC155748C2001452E5 /* NSString+Extensions.m */; };
+		229E280B155748F5001452E5 /* cooocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E280A155748F5001452E5 /* cooocoaTests.m */; };
+		229E28101557494C001452E5 /* GDataXMLException.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E280C1557494C001452E5 /* GDataXMLException.h */; };
+		229E28111557494C001452E5 /* GDataXMLException.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E280D1557494C001452E5 /* GDataXMLException.m */; };
+		229E28121557494C001452E5 /* GDataXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E280E1557494C001452E5 /* GDataXMLNode.h */; };
+		229E28131557494C001452E5 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E280F1557494C001452E5 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		229E2820155749A6001452E5 /* BTCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E2815155749A6001452E5 /* BTCollections.h */; };
+		229E2821155749A6001452E5 /* BTCollections.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E2816155749A6001452E5 /* BTCollections.m */; };
+		229E2822155749A6001452E5 /* BTEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E2817155749A6001452E5 /* BTEnum.h */; };
+		229E2823155749A6001452E5 /* BTEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E2818155749A6001452E5 /* BTEnum.m */; };
+		229E2824155749A6001452E5 /* BTMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E2819155749A6001452E5 /* BTMacros.h */; };
+		229E2825155749A6001452E5 /* BTRandoms.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E281A155749A6001452E5 /* BTRandoms.h */; };
+		229E2826155749A6001452E5 /* BTRandoms.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E281B155749A6001452E5 /* BTRandoms.m */; };
+		229E2827155749A6001452E5 /* BTUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E281C155749A6001452E5 /* BTUtils.h */; };
+		229E2828155749A6001452E5 /* BTUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E281D155749A6001452E5 /* BTUtils.m */; };
+		229E2829155749A6001452E5 /* BTWeightedArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E281E155749A6001452E5 /* BTWeightedArray.h */; };
+		229E282A155749A6001452E5 /* BTWeightedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E281F155749A6001452E5 /* BTWeightedArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +54,31 @@
 		229E27C11557473D001452E5 /* cooocoaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cooocoaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		229E27C21557473D001452E5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		229E27C41557473D001452E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		229E27E1155747EE001452E5 /* cooocoaTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cooocoaTests.h; path = Tests/cooocoaTests.h; sourceTree = "<group>"; };
-		229E27E2155747EE001452E5 /* cooocoaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cooocoaTests.m; path = Tests/cooocoaTests.m; sourceTree = "<group>"; };
+		229E27F5155748C2001452E5 /* GDataXMLNode+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GDataXMLNode+Extensions.h"; sourceTree = "<group>"; };
+		229E27F6155748C2001452E5 /* GDataXMLNode+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GDataXMLNode+Extensions.m"; sourceTree = "<group>"; };
+		229E27F7155748C2001452E5 /* NSArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extensions.h"; sourceTree = "<group>"; };
+		229E27F8155748C2001452E5 /* NSArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extensions.m"; sourceTree = "<group>"; };
+		229E27F9155748C2001452E5 /* NSMutableArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Extensions.h"; sourceTree = "<group>"; };
+		229E27FA155748C2001452E5 /* NSMutableArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Extensions.m"; sourceTree = "<group>"; };
+		229E27FB155748C2001452E5 /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
+		229E27FC155748C2001452E5 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
+		229E2809155748F5001452E5 /* cooocoaTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cooocoaTests.h; sourceTree = "<group>"; };
+		229E280A155748F5001452E5 /* cooocoaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cooocoaTests.m; sourceTree = "<group>"; };
+		229E280C1557494C001452E5 /* GDataXMLException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLException.h; sourceTree = "<group>"; };
+		229E280D1557494C001452E5 /* GDataXMLException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLException.m; sourceTree = "<group>"; };
+		229E280E1557494C001452E5 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		229E280F1557494C001452E5 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		229E2815155749A6001452E5 /* BTCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCollections.h; sourceTree = "<group>"; };
+		229E2816155749A6001452E5 /* BTCollections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCollections.m; sourceTree = "<group>"; };
+		229E2817155749A6001452E5 /* BTEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTEnum.h; sourceTree = "<group>"; };
+		229E2818155749A6001452E5 /* BTEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTEnum.m; sourceTree = "<group>"; };
+		229E2819155749A6001452E5 /* BTMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTMacros.h; sourceTree = "<group>"; };
+		229E281A155749A6001452E5 /* BTRandoms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRandoms.h; sourceTree = "<group>"; };
+		229E281B155749A6001452E5 /* BTRandoms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRandoms.m; sourceTree = "<group>"; };
+		229E281C155749A6001452E5 /* BTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTUtils.h; sourceTree = "<group>"; };
+		229E281D155749A6001452E5 /* BTUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTUtils.m; sourceTree = "<group>"; };
+		229E281E155749A6001452E5 /* BTWeightedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTWeightedArray.h; sourceTree = "<group>"; };
+		229E281F155749A6001452E5 /* BTWeightedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTWeightedArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,17 +136,64 @@
 		229E27DE155747CC001452E5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				229E281415574972001452E5 /* Utils */,
+				229E27F31557489B001452E5 /* Categories */,
+				229E27F4155748A2001452E5 /* XML */,
 			);
-			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		229E27E0155747DF001452E5 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				229E27E1155747EE001452E5 /* cooocoaTests.h */,
-				229E27E2155747EE001452E5 /* cooocoaTests.m */,
+				229E2809155748F5001452E5 /* cooocoaTests.h */,
+				229E280A155748F5001452E5 /* cooocoaTests.m */,
 			);
-			name = Tests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		229E27F31557489B001452E5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				229E27F7155748C2001452E5 /* NSArray+Extensions.h */,
+				229E27F8155748C2001452E5 /* NSArray+Extensions.m */,
+				229E27F9155748C2001452E5 /* NSMutableArray+Extensions.h */,
+				229E27FA155748C2001452E5 /* NSMutableArray+Extensions.m */,
+				229E27FB155748C2001452E5 /* NSString+Extensions.h */,
+				229E27FC155748C2001452E5 /* NSString+Extensions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		229E27F4155748A2001452E5 /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				229E27F5155748C2001452E5 /* GDataXMLNode+Extensions.h */,
+				229E27F6155748C2001452E5 /* GDataXMLNode+Extensions.m */,
+				229E280C1557494C001452E5 /* GDataXMLException.h */,
+				229E280D1557494C001452E5 /* GDataXMLException.m */,
+				229E280E1557494C001452E5 /* GDataXMLNode.h */,
+				229E280F1557494C001452E5 /* GDataXMLNode.m */,
+			);
+			name = XML;
+			sourceTree = "<group>";
+		};
+		229E281415574972001452E5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				229E2815155749A6001452E5 /* BTCollections.h */,
+				229E2816155749A6001452E5 /* BTCollections.m */,
+				229E2817155749A6001452E5 /* BTEnum.h */,
+				229E2818155749A6001452E5 /* BTEnum.m */,
+				229E2819155749A6001452E5 /* BTMacros.h */,
+				229E281A155749A6001452E5 /* BTRandoms.h */,
+				229E281B155749A6001452E5 /* BTRandoms.m */,
+				229E281C155749A6001452E5 /* BTUtils.h */,
+				229E281D155749A6001452E5 /* BTUtils.m */,
+				229E281E155749A6001452E5 /* BTWeightedArray.h */,
+				229E281F155749A6001452E5 /* BTWeightedArray.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +203,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				229E27FF155748C2001452E5 /* GDataXMLNode+Extensions.h in Headers */,
+				229E2801155748C2001452E5 /* NSArray+Extensions.h in Headers */,
+				229E2803155748C2001452E5 /* NSMutableArray+Extensions.h in Headers */,
+				229E2805155748C2001452E5 /* NSString+Extensions.h in Headers */,
+				229E28101557494C001452E5 /* GDataXMLException.h in Headers */,
+				229E28121557494C001452E5 /* GDataXMLNode.h in Headers */,
+				229E2820155749A6001452E5 /* BTCollections.h in Headers */,
+				229E2822155749A6001452E5 /* BTEnum.h in Headers */,
+				229E2824155749A6001452E5 /* BTMacros.h in Headers */,
+				229E2825155749A6001452E5 /* BTRandoms.h in Headers */,
+				229E2827155749A6001452E5 /* BTUtils.h in Headers */,
+				229E2829155749A6001452E5 /* BTWeightedArray.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +314,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				229E2800155748C2001452E5 /* GDataXMLNode+Extensions.m in Sources */,
+				229E2802155748C2001452E5 /* NSArray+Extensions.m in Sources */,
+				229E2804155748C2001452E5 /* NSMutableArray+Extensions.m in Sources */,
+				229E2806155748C2001452E5 /* NSString+Extensions.m in Sources */,
+				229E28111557494C001452E5 /* GDataXMLException.m in Sources */,
+				229E28131557494C001452E5 /* GDataXMLNode.m in Sources */,
+				229E2821155749A6001452E5 /* BTCollections.m in Sources */,
+				229E2823155749A6001452E5 /* BTEnum.m in Sources */,
+				229E2826155749A6001452E5 /* BTRandoms.m in Sources */,
+				229E2828155749A6001452E5 /* BTUtils.m in Sources */,
+				229E282A155749A6001452E5 /* BTWeightedArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				229E27E3155747EE001452E5 /* cooocoaTests.m in Sources */,
+				229E280B155748F5001452E5 /* cooocoaTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +367,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lxml2",
+				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -268,6 +389,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lxml2",
+				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -279,6 +405,7 @@
 				DSTROOT = /tmp/cooocoa.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = cooocoa_Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -291,6 +418,7 @@
 				DSTROOT = /tmp/cooocoa.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = cooocoa_Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
