@@ -12,6 +12,7 @@
 - (BOOL)hasChild:(NSString*)name;
 - (BOOL)hasAttribute:(NSString*)name;
 
+- (NSString*)getAttr:(NSString*)name required:(BOOL)required;
 - (NSString*)stringAttribute:(NSString*)name defaultVal:(NSString*)defaultVal;
 - (NSString*)stringAttribute:(NSString*)name;
 - (float)floatAttribute:(NSString*)name defaultVal:(float)defaultVal;
