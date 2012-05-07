@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		222C963C1558812000ED42B1 /* OOORegistration.h in Headers */ = {isa = PBXBuildFile; fileRef = 222C963A1558812000ED42B1 /* OOORegistration.h */; };
+		222C963D1558812000ED42B1 /* OOORegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = 222C963B1558812000ED42B1 /* OOORegistration.m */; };
 		229E27B51557473D001452E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27B41557473D001452E5 /* Foundation.framework */; };
 		229E27C31557473D001452E5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27C21557473D001452E5 /* SenTestingKit.framework */; };
 		229E27C61557473D001452E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27B41557473D001452E5 /* Foundation.framework */; };
@@ -56,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		222C963A1558812000ED42B1 /* OOORegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOORegistration.h; sourceTree = "<group>"; };
+		222C963B1558812000ED42B1 /* OOORegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOORegistration.m; sourceTree = "<group>"; };
 		229E27B11557473D001452E5 /* libcooocoa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcooocoa.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		229E27B41557473D001452E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		229E27C11557473D001452E5 /* cooocoaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cooocoaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +215,8 @@
 				229E2819155749A6001452E5 /* OOOMacros.h */,
 				229E281A155749A6001452E5 /* OOORandoms.h */,
 				229E281B155749A6001452E5 /* OOORandoms.m */,
+				222C963A1558812000ED42B1 /* OOORegistration.h */,
+				222C963B1558812000ED42B1 /* OOORegistration.m */,
 				229E281C155749A6001452E5 /* OOOUtils.h */,
 				229E281D155749A6001452E5 /* OOOUtils.m */,
 				229E281E155749A6001452E5 /* OOOWeightedArray.h */,
@@ -250,6 +256,7 @@
 				229E283415574E87001452E5 /* cooocoa_Prefix.pch in Headers */,
 				22E7697A15575C8A006E96DB /* OOOFloatRange.h in Headers */,
 				22E7697C15575C8A006E96DB /* OOOIntRange.h in Headers */,
+				222C963C1558812000ED42B1 /* OOORegistration.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +370,7 @@
 				229E283115574E05001452E5 /* UIColor+OOOExtensions.m in Sources */,
 				22E7697B15575C8A006E96DB /* OOOFloatRange.m in Sources */,
 				22E7697D15575C8A006E96DB /* OOOIntRange.m in Sources */,
+				222C963D1558812000ED42B1 /* OOORegistration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

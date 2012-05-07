@@ -16,6 +16,7 @@
 #import "OOOIntRange.h"
 #import "OOOMacros.h"
 #import "OOORandoms.h"
+#import "OOORegistration.h"
 #import "OOOUtils.h"
 #import "OOOWeightedArray.h"
 
