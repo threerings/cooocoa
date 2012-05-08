@@ -3,32 +3,23 @@
 
 #import "OOOBoxed.h"
 
-@implementation OOOBoxedBool
-@synthesize value;
-+ (OOOBoxedBool*)withValue:(BOOL)val { return [[OOOBoxedBool alloc] initWithValue:val]; }
-- (id)initWithValue:(BOOL)val { if ((self = [super init])) { value = val; } return self; }
-@end
+#define OOO_DEFINE_BOXED(clazz, type) \
+    @implementation clazz  \
+    @synthesize value;  \
+    + (clazz*)createWith:(type)val { return [[clazz alloc] initWithValue:val]; } \
+    + (clazz*)create { return [[clazz alloc] initWithValue:0]; } \
+    - (id)initWithValue:(type)val { if ((self = [super init])) { value = val; } return self; } \
+    - (id)copyWithZone:(NSZone*)zone { return [[clazz allocWithZone:zone] initWithValue:value]; } \
+    - (NSUInteger)hash { return (NSUInteger)value; } \
+    - (BOOL)isEqual:(id)other { \
+        if (other == self) return YES;  \
+        else if (other == nil || ![other isKindOfClass:[self class]]) return NO; \
+        else return ((clazz*)other).value == value; \
+    } \
+    @end
 
-@implementation OOOBoxedInt
-@synthesize value;
-+ (OOOBoxedInt*)withValue:(int)val { return [[OOOBoxedInt alloc] initWithValue:val]; }
-- (id)initWithValue:(int)val { if ((self = [super init])) { value = val; } return self; }
-@end
-
-@implementation OOOBoxedLong
-@synthesize value;
-+ (OOOBoxedLong*)withValue:(long)val { return [[OOOBoxedLong alloc] initWithValue:val]; }
-- (id)initWithValue:(long)val { if ((self = [super init])) { value = val; } return self; }
-@end
-
-@implementation OOOBoxedFloat
-@synthesize value;
-+ (OOOBoxedFloat*)withValue:(float)val { return [[OOOBoxedFloat alloc] initWithValue:val]; }
-- (id)initWithValue:(float)val { if ((self = [super init])) { value = val; } return self; }
-@end
-
-@implementation OOOBoxedDouble
-@synthesize value;
-+ (OOOBoxedDouble*)withValue:(double)val { return [[OOOBoxedDouble alloc] initWithValue:val]; }
-- (id)initWithValue:(double)val { if ((self = [super init])) { value = val; } return self; }
-@end
+OOO_DEFINE_BOXED(OOOBoxedBool, BOOL);
+OOO_DEFINE_BOXED(OOOBoxedInt, int);
+OOO_DEFINE_BOXED(OOOBoxedLong, long);
+OOO_DEFINE_BOXED(OOOBoxedFloat, float);
+OOO_DEFINE_BOXED(OOOBoxedDouble, double);
