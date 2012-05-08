@@ -128,7 +128,6 @@
 		229E27A61557473C001452E5 = {
 			isa = PBXGroup;
 			children = (
-				22E43A331558B4B6003A43B8 /* UIKit.framework */,
 				229E27DE155747CC001452E5 /* Classes */,
 				229E283215574E75001452E5 /* Other Sources */,
 				229E27E0155747DF001452E5 /* Tests */,
@@ -149,6 +148,7 @@
 		229E27B31557473D001452E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22E43A331558B4B6003A43B8 /* UIKit.framework */,
 				229E27B41557473D001452E5 /* Foundation.framework */,
 				229E27C21557473D001452E5 /* SenTestingKit.framework */,
 			);
