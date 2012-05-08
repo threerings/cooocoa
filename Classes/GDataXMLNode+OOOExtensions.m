@@ -39,13 +39,17 @@
     return [self attributeForName:name] != nil;
 }
 
-- (NSString*)stringAttribute:(NSString*)name defaultVal:(NSString*)defaultVal {
-    NSString* attr = [self getAttr:name required:NO];
+- (NSString*)stringAttribute:(NSString*)name defaultVal:(NSString*)defaultVal required:(BOOL)required {
+    NSString* attr = [self getAttr:name required:required];
     return (attr != nil ? attr : defaultVal);
 }
 
+- (NSString*)stringAttribute:(NSString*)name defaultVal:(NSString*)defaultVal {
+    return [self stringAttribute:name defaultVal:defaultVal required:NO];
+}
+
 - (NSString*)stringAttribute:(NSString*)name {
-    return [self getAttr:name required:YES];
+    return [self stringAttribute:name defaultVal:nil required:YES];
 }
 
 - (float)floatAttribute:(NSString*)name defaultVal:(float)defaultVal required:(BOOL)required {
