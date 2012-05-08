@@ -42,6 +42,8 @@
 		229E283115574E05001452E5 /* UIColor+OOOExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E282F15574E05001452E5 /* UIColor+OOOExtensions.m */; };
 		229E283415574E87001452E5 /* cooocoa_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 229E283315574E87001452E5 /* cooocoa_Prefix.pch */; };
 		22E43A341558B4B6003A43B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E43A331558B4B6003A43B8 /* UIKit.framework */; };
+		22E43A861559BEE8003A43B8 /* OOOBoxed.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E43A841559BEE8003A43B8 /* OOOBoxed.h */; };
+		22E43A871559BEE8003A43B8 /* OOOBoxed.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E43A851559BEE8003A43B8 /* OOOBoxed.m */; };
 		22E7697A15575C8A006E96DB /* OOOFloatRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E7697615575C8A006E96DB /* OOOFloatRange.h */; };
 		22E7697B15575C8A006E96DB /* OOOFloatRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7697715575C8A006E96DB /* OOOFloatRange.m */; };
 		22E7697C15575C8A006E96DB /* OOOIntRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E7697815575C8A006E96DB /* OOOIntRange.h */; };
@@ -96,6 +98,8 @@
 		229E282F15574E05001452E5 /* UIColor+OOOExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+OOOExtensions.m"; sourceTree = "<group>"; };
 		229E283315574E87001452E5 /* cooocoa_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cooocoa_Prefix.pch; sourceTree = "<group>"; };
 		22E43A331558B4B6003A43B8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		22E43A841559BEE8003A43B8 /* OOOBoxed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOBoxed.h; sourceTree = "<group>"; };
+		22E43A851559BEE8003A43B8 /* OOOBoxed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOBoxed.m; sourceTree = "<group>"; };
 		22E7697615575C8A006E96DB /* OOOFloatRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOFloatRange.h; sourceTree = "<group>"; };
 		22E7697715575C8A006E96DB /* OOOFloatRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOFloatRange.m; sourceTree = "<group>"; };
 		22E7697815575C8A006E96DB /* OOOIntRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOIntRange.h; sourceTree = "<group>"; };
@@ -206,6 +210,8 @@
 		229E281415574972001452E5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				22E43A841559BEE8003A43B8 /* OOOBoxed.h */,
+				22E43A851559BEE8003A43B8 /* OOOBoxed.m */,
 				225041B7155889B10014FA5D /* OOOCallbacks.h */,
 				229E2815155749A6001452E5 /* OOOCollections.h */,
 				229E2816155749A6001452E5 /* OOOCollections.m */,
@@ -261,6 +267,7 @@
 				22E7697C15575C8A006E96DB /* OOOIntRange.h in Headers */,
 				222C963C1558812000ED42B1 /* OOORegistration.h in Headers */,
 				225041B8155889B10014FA5D /* OOOCallbacks.h in Headers */,
+				22E43A861559BEE8003A43B8 /* OOOBoxed.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +316,9 @@
 		229E27A81557473C001452E5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = OOO;
 				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Three Rings Design";
 			};
 			buildConfigurationList = 229E27AB1557473C001452E5 /* Build configuration list for PBXProject "cooocoa" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -375,6 +384,7 @@
 				22E7697B15575C8A006E96DB /* OOOFloatRange.m in Sources */,
 				22E7697D15575C8A006E96DB /* OOOIntRange.m in Sources */,
 				222C963D1558812000ED42B1 /* OOORegistration.m in Sources */,
+				22E43A871559BEE8003A43B8 /* OOOBoxed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
