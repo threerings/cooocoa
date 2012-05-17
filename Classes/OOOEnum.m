@@ -5,14 +5,15 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
-@interface OOOEnum ()
+@interface OOOEnum () {
+@protected
+    NSString* _name;
+}
 + (NSMutableDictionary*)enums;
 + (NSMutableSet*)blocked;
 @end
 
-@implementation OOOEnum {
-    NSString* _name;
-}
+@implementation OOOEnum
 
 @synthesize name = _name;
 

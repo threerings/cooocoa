@@ -5,7 +5,11 @@
 #import "OOORandoms.h"
 #import "NSArray+OOOExtensions.h"
 
-@interface WeightedObject : NSObject
+@interface WeightedObject : NSObject {
+    id _obj;
+    float _weight;
+}
+
 @property (readonly) id obj;
 @property (readonly) float weight;
 @property float min;
@@ -13,13 +17,12 @@
 - (id)initWithObj:(id)obj weight:(float)weight;
 @end
 
-@implementation WeightedObject {
-    id _obj;
-    float _weight;
-}
+@implementation WeightedObject
+
 @synthesize obj = _obj;
 @synthesize weight = _weight;
 @synthesize min;
+
 - (id)initWithObj:(id)obj weight:(float)weight {
     if (!(self = [super init])) {
         return nil;
