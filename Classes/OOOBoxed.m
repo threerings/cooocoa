@@ -23,3 +23,4 @@ OOO_DEFINE_BOXED(OOOBoxedInt, int);
 OOO_DEFINE_BOXED(OOOBoxedLong, long);
 OOO_DEFINE_BOXED(OOOBoxedFloat, float);
 OOO_DEFINE_BOXED(OOOBoxedDouble, double);
+OOO_DEFINE_BOXED(OOOBoxedWeakRef, __weak id);

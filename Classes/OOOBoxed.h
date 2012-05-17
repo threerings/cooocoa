@@ -35,3 +35,10 @@
 - (id)initWithValue:(double)val;
 @property double value;
 @end
+
+@interface OOOBoxedWeakRef : NSObject <NSCopying>
++ (OOOBoxedWeakRef*)createWith:(id)val;
++ (OOOBoxedWeakRef*)create;
+- (id)initWithValue:(id)val;
+@property (weak) id value;
+@end
