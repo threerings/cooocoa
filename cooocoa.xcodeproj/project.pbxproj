@@ -41,6 +41,10 @@
 		229E283015574E05001452E5 /* UIColor+OOOExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E282E15574E05001452E5 /* UIColor+OOOExtensions.h */; };
 		229E283115574E05001452E5 /* UIColor+OOOExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E282F15574E05001452E5 /* UIColor+OOOExtensions.m */; };
 		229E283415574E87001452E5 /* cooocoa_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 229E283315574E87001452E5 /* cooocoa_Prefix.pch */; };
+		22A87047156AEAE300101F6D /* OOOEasing.h in Headers */ = {isa = PBXBuildFile; fileRef = 22A87042156AEAE300101F6D /* OOOEasing.h */; };
+		22A87048156AEAE300101F6D /* OOOEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A87043156AEAE300101F6D /* OOOEasing.m */; };
+		22A8704A156AEAE300101F6D /* OOOPowerEaser.h in Headers */ = {isa = PBXBuildFile; fileRef = 22A87045156AEAE300101F6D /* OOOPowerEaser.h */; };
+		22A8704B156AEAE300101F6D /* OOOPowerEaser.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A87046156AEAE300101F6D /* OOOPowerEaser.m */; };
 		22E43A341558B4B6003A43B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E43A331558B4B6003A43B8 /* UIKit.framework */; };
 		22E43A861559BEE8003A43B8 /* OOOBoxed.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E43A841559BEE8003A43B8 /* OOOBoxed.h */; };
 		22E43A871559BEE8003A43B8 /* OOOBoxed.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E43A851559BEE8003A43B8 /* OOOBoxed.m */; };
@@ -97,6 +101,10 @@
 		229E282E15574E05001452E5 /* UIColor+OOOExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+OOOExtensions.h"; sourceTree = "<group>"; };
 		229E282F15574E05001452E5 /* UIColor+OOOExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+OOOExtensions.m"; sourceTree = "<group>"; };
 		229E283315574E87001452E5 /* cooocoa_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cooocoa_Prefix.pch; sourceTree = "<group>"; };
+		22A87042156AEAE300101F6D /* OOOEasing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOEasing.h; sourceTree = "<group>"; };
+		22A87043156AEAE300101F6D /* OOOEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOEasing.m; sourceTree = "<group>"; };
+		22A87045156AEAE300101F6D /* OOOPowerEaser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOPowerEaser.h; sourceTree = "<group>"; };
+		22A87046156AEAE300101F6D /* OOOPowerEaser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOPowerEaser.m; sourceTree = "<group>"; };
 		22E43A331558B4B6003A43B8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		22E43A841559BEE8003A43B8 /* OOOBoxed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOBoxed.h; sourceTree = "<group>"; };
 		22E43A851559BEE8003A43B8 /* OOOBoxed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOBoxed.m; sourceTree = "<group>"; };
@@ -215,6 +223,8 @@
 				225041B7155889B10014FA5D /* OOOCallbacks.h */,
 				229E2815155749A6001452E5 /* OOOCollections.h */,
 				229E2816155749A6001452E5 /* OOOCollections.m */,
+				22A87042156AEAE300101F6D /* OOOEasing.h */,
+				22A87043156AEAE300101F6D /* OOOEasing.m */,
 				229E2817155749A6001452E5 /* OOOEnum.h */,
 				229E2818155749A6001452E5 /* OOOEnum.m */,
 				22E7697615575C8A006E96DB /* OOOFloatRange.h */,
@@ -222,6 +232,8 @@
 				22E7697815575C8A006E96DB /* OOOIntRange.h */,
 				22E7697915575C8A006E96DB /* OOOIntRange.m */,
 				229E2819155749A6001452E5 /* OOOMacros.h */,
+				22A87045156AEAE300101F6D /* OOOPowerEaser.h */,
+				22A87046156AEAE300101F6D /* OOOPowerEaser.m */,
 				229E281A155749A6001452E5 /* OOORandoms.h */,
 				229E281B155749A6001452E5 /* OOORandoms.m */,
 				222C963A1558812000ED42B1 /* OOORegistration.h */,
@@ -268,6 +280,8 @@
 				222C963C1558812000ED42B1 /* OOORegistration.h in Headers */,
 				225041B8155889B10014FA5D /* OOOCallbacks.h in Headers */,
 				22E43A861559BEE8003A43B8 /* OOOBoxed.h in Headers */,
+				22A87047156AEAE300101F6D /* OOOEasing.h in Headers */,
+				22A8704A156AEAE300101F6D /* OOOPowerEaser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +399,8 @@
 				22E7697D15575C8A006E96DB /* OOOIntRange.m in Sources */,
 				222C963D1558812000ED42B1 /* OOORegistration.m in Sources */,
 				22E43A871559BEE8003A43B8 /* OOOBoxed.m in Sources */,
+				22A87048156AEAE300101F6D /* OOOEasing.m in Sources */,
+				22A8704B156AEAE300101F6D /* OOOPowerEaser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

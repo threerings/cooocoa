@@ -13,6 +13,7 @@
 #import "OOOBoxed.h"
 #import "OOOCallbacks.h"
 #import "OOOCollections.h"
+#import "OOOEasing.h"
 #import "OOOEnum.h"
 #import "OOOFloatRange.h"
 #import "OOOIntRange.h"
