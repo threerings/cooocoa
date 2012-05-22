@@ -18,9 +18,9 @@
 
 @implementation OOOEasing
 
-+ (id<OOOInterpolator>)linear { return OOO_STATIC_OBJECT([[OOOLinearEaser alloc] init]); }
-+ (OOOPowerEaser*)quadratic { return OOO_STATIC_OBJECT([[OOOPowerEaser alloc] initWithExponent:2]); }
-+ (OOOPowerEaser*)cubic { return OOO_STATIC_OBJECT([[OOOPowerEaser alloc] initWithExponent:3]); }
-+ (OOOPowerEaser*)quartic { return OOO_STATIC_OBJECT([[OOOPowerEaser alloc] initWithExponent:4]); }
-+ (OOOPowerEaser*)quintic { return OOO_STATIC_OBJECT([[OOOPowerEaser alloc] initWithExponent:5]); }
++ (id<OOOInterpolator>)linear { return OOO_SINGLETON([[OOOLinearEaser alloc] init]); }
++ (OOOPowerEaser*)quadratic { return OOO_SINGLETON([[OOOPowerEaser alloc] initWithExponent:2]); }
++ (OOOPowerEaser*)cubic { return OOO_SINGLETON([[OOOPowerEaser alloc] initWithExponent:3]); }
++ (OOOPowerEaser*)quartic { return OOO_SINGLETON([[OOOPowerEaser alloc] initWithExponent:4]); }
++ (OOOPowerEaser*)quintic { return OOO_SINGLETON([[OOOPowerEaser alloc] initWithExponent:5]); }
 @end

@@ -2,6 +2,7 @@
 // cooocoa - Copyright 2012 Three Rings Design
 
 #import "OOOEnum.h"
+#import "OOOMacros.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 
@@ -70,13 +71,7 @@
 }
 
 + (NSMutableDictionary*)enums {
-    static NSMutableDictionary* enums = nil;
-        @synchronized(self) {
-        if (enums == nil) {
-            enums = [NSMutableDictionary dictionary];
-        }
-    }
-    return enums;
+    return OOO_SINGLETON([NSMutableDictionary dictionary]);
 }
 
 + (NSMutableSet*)blocked {

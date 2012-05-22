@@ -13,12 +13,10 @@
 })
 
 /// Creates and initializes a static object.
-/// -(Foo*)getSingletonFoo { return OOO_STATIC_OBJECT([[Foo alloc] init]); }
-#define OOO_STATIC_OBJECT(INIT_FUNC) ({ \
+/// -(Foo*)getSingletonFoo { return OOO_SINGLETON([[Foo alloc] init]); }
+#define OOO_SINGLETON(INIT_FUNC) ({ \
     static dispatch_once_t once; \
     static id gObject = nil; \
     dispatch_once(&once, ^{ gObject = INIT_FUNC; }); \
     gObject; \
 })
-
-#endif
