@@ -14,21 +14,11 @@
 
 /// Creates and initializes a static object.
 /// -(Foo*)getSingletonFoo { return OOO_STATIC_OBJECT([[Foo alloc] init]); }
-
-#ifdef OOO_THREAD_SAFE
-
-    #define OOO_STATIC_OBJECT(INIT_FUNC) ({ \
-        static id gObject = nil; \
-        @synchronized(self) { if (gObject == nil) gObject = INIT_FUNC;  } \
-        gObject; \
-    })
-
-#else
-
-    #define OOO_STATIC_OBJECT(INIT_FUNC) ({ \
-        static id gObject = nil; \
-        if (gObject == nil) gObject = INIT_FUNC; \
-        gObject; \
-    })
+#define OOO_STATIC_OBJECT(INIT_FUNC) ({ \
+    static dispatch_once_t once; \
+    static id gObject = nil; \
+    dispatch_once(&once, ^{ gObject = INIT_FUNC; }); \
+    gObject; \
+})
 
 #endif
