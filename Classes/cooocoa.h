@@ -11,7 +11,6 @@
 
 // Utils
 #import "OOOBoxed.h"
-#import "OOOCallbacks.h"
 #import "OOOCollections.h"
 #import "OOOEasing.h"
 #import "OOOEnum.h"
@@ -20,6 +19,7 @@
 #import "OOOMacros.h"
 #import "OOORandoms.h"
 #import "OOORegistration.h"
+#import "OOOTypes.h"
 #import "OOOUtils.h"
 #import "OOOWeightedArray.h"
 
