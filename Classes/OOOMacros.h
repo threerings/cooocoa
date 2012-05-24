@@ -20,3 +20,9 @@
     dispatch_once(&once, ^{ gObject = INIT_FUNC; }); \
     gObject; \
 })
+
+/// Throws an exception indicating that the current method is abstract
+#define OOO_IS_ABSTRACT() ({ \
+    [NSException raise:NSInternalInconsistencyException \
+                format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]; \
+})
