@@ -12,6 +12,16 @@
     children; \
 })
 
+/// Creates an NSString from a format string and parameters.
+/// - (NSString*)getMyFormatString:(NSString*)format, ... { return OOO_FORMAT_TO_STRING(format); }
+#define OOO_FORMAT_TO_STRING(format) ({ \
+    va_list args; \
+    va_start(args, format); \
+    NSString* string = [[NSString alloc] initWithFormat:format arguments:args]; \
+    va_end(args); \
+    string; \
+})
+
 /// Creates and initializes a static object.
 /// -(Foo*)getSingletonFoo { return OOO_SINGLETON([[Foo alloc] init]); }
 #define OOO_SINGLETON(INIT_FUNC) ({ \
