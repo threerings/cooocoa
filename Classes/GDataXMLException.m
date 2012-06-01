@@ -3,27 +3,21 @@
 
 #import "GDataXMLException.h"
 #import "GDataXMLNode.h"
+#import "OOOMacros.h"
 
 static NSString * const NAME = @"XMLException";
 
 @implementation GDataXMLException
 
 + (GDataXMLException*)withReason:(NSString*)format, ... {
-    va_list args;
-    va_start(args, format);
-    NSString* reason = [[NSString alloc]initWithFormat:format arguments:args];
-    va_end(args);
-    return [[GDataXMLException alloc] initWithReason:reason];
+    return [[GDataXMLException alloc] initWithReason:OOO_FORMAT_TO_STRING(format)];
 }
 
 + (GDataXMLException*)withElement:(GDataXMLElement*)badElement reason:(NSString*)format, ... {
-    va_list args;
-    va_start(args, format);
-    NSMutableString* reason = [[NSMutableString alloc]initWithFormat:format arguments:args];
-    va_end(args);
+    NSString* reason = OOO_FORMAT_TO_STRING(format);
     
     if (badElement != nil) {
-        [reason appendFormat:@"\n %@", [badElement description]];
+        reason = [NSString stringWithFormat:@"%@\b%@", reason, [badElement description]];
     }
     
     return [[GDataXMLException alloc] initWithReason:reason];
@@ -31,10 +25,7 @@ static NSString * const NAME = @"XMLException";
 
 - (id)initWithReason:(NSString*)reason
 {
-    if (!(self = [super initWithName:NAME reason:reason userInfo:nil])) {
-        return nil;
-    }
-    return self;
+    return [super initWithName:NAME reason:reason userInfo:nil];
 }
 
 @end
