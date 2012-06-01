@@ -5,11 +5,11 @@
 /// -(NSArray*)toArray:(Foo*)obj1, ... { return OOO_VARARGS_TO_ARRAY(Foo*, obj1); }
 #define OOO_VARARGS_TO_ARRAY(type, first) ({ \
     va_list ap; \
-    va_start(ap, child); \
-    NSMutableArray* children = [[NSMutableArray alloc] init]; \
-    for (; child != nil; child = va_arg(ap, type)) [children addObject:child]; \
+    va_start(ap, first); \
+    NSMutableArray* array = [[NSMutableArray alloc] init]; \
+    for (; first != nil; first = va_arg(ap, type)) [array addObject:first]; \
     va_end(ap); \
-    children; \
+    array; \
 })
 
 /// Creates an NSString from a format string and parameters.
