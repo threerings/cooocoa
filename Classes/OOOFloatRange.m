@@ -9,12 +9,11 @@
 @synthesize rands, min, max;
 
 - (id)initWithMin:(float)theMin max:(float)theMax rands:(OOORandoms*)theRands {
-    if (!(self = [super init])) {
-        return nil;
+    if ((self = [super init])) {
+        self.min = theMin;
+        self.max = theMax;
+        self.rands = theRands;
     }
-    self.min = theMin;
-    self.max = theMax;
-    self.rands = theRands;
     return self;
 }
 

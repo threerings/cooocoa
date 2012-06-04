@@ -32,20 +32,19 @@
 }
 
 - (id)init {
-    if (!(self = [super init])) {
-        return nil;
+    if ((self = [super init])) {
+        Class clazz = [self class];
+        if ([[OOOEnum blocked] containsObject:clazz]) {
+            [NSException raise:NSGenericException format:@"You may not just construct an enum!"];
+        }
+        
+        NSMutableArray* array = [[OOOEnum enums] objectForKey:clazz];
+        if (array == nil) {
+            array = [NSMutableArray array];
+            [[OOOEnum enums] setObject:array forKey:clazz];
+        }
+        [array addObject:self];
     }
-    Class clazz = [self class];
-    if ([[OOOEnum blocked] containsObject:clazz]) {
-        [NSException raise:NSGenericException format:@"You may not just construct an enum!"];
-    }
-    
-    NSMutableArray* array = [[OOOEnum enums] objectForKey:clazz];
-    if (array == nil) {
-        array = [NSMutableArray array];
-        [[OOOEnum enums] setObject:array forKey:clazz];
-    }
-    [array addObject:self];
     return self;
 }
 

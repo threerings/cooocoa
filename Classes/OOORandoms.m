@@ -73,20 +73,18 @@
 @implementation OOORandoms
 
 - (id)init {
-    if (!(self = [super init])) {
-        return nil;
+    if ((self = [super init])) {
+        mti = N+1;
+        [self setSeed:(unsigned int)time(0)];
     }
-    mti = N+1;
-    [self setSeed:(unsigned int)time(0)];
     return self;
 }
 
 - (id)initWithSeed:(unsigned int)seed {
-    if (!(self = [super init])) {
-        return nil;
+    if ((self = [super init])) {
+        mti = N+1;
+        [self setSeed:seed];
     }
-    mti = N+1;
-    [self setSeed:seed];
     return self;
 }
 

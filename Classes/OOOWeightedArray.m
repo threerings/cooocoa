@@ -24,11 +24,10 @@
 @synthesize min;
 
 - (id)initWithObj:(id)obj weight:(float)weight {
-    if (!(self = [super init])) {
-        return nil;
+    if ((self = [super init])) {
+        _obj = obj;
+        _weight = weight;
     }
-    _obj = obj;
-    _weight = weight;
     return self;
 }
 
@@ -41,11 +40,10 @@
 @implementation OOOWeightedArray
 
 - (id)initWithRands:(OOORandoms*)rands {
-    if (!(self = [super init])) {
-        return nil;
+    if ((self = [super init])) {
+        _rands = rands;
+        _objects = [NSMutableArray array];
     }
-    _rands = rands;
-    _objects = [NSMutableArray array];
     return self;
 }
 
