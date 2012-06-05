@@ -1,6 +1,10 @@
 //
 // cooocoa - Copyright 2012 Three Rings Design
 
+/// Helpers
+#define OOO_CONCAT_TOKENS(a, b) a ## b
+#define OOO_EXPAND_THEN_CONCAT(a,b) OOO_CONCAT_TOKENS(a, b)
+
 /// Returns an NSMutableArray containing a method's varargs
 /// -(NSArray*)toArray:(Foo*)obj1, ... { return OOO_VARARGS_TO_ARRAY(Foo*, obj1); }
 #define OOO_VARARGS_TO_ARRAY(type, first) ({ \
@@ -36,3 +40,6 @@
     [NSException raise:NSInternalInconsistencyException \
                 format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]; \
 })
+
+/// Compile-time assertion
+#define OOO_STATIC_ASSERT(e) enum { OOO_EXPAND_THEN_CONCAT(ASSERT_line_,__LINE__) = 1/!!(e) }
