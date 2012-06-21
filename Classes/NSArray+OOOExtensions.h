@@ -3,6 +3,7 @@
 
 @interface NSArray (OOOExtensions)
 
+- (NSArray*)reverse;
 - (NSMutableArray*)filter:(BOOL (^)(id object))pred;
 - (NSMutableArray*)map:(id (^)(id object))transformer;
 - (id)findObject:(BOOL (^)(id object))pred;

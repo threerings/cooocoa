@@ -7,6 +7,10 @@
 
 @implementation NSArray (OOOExtensions)
 
+- (NSArray*)reverse {
+    return [self.reverseObjectEnumerator allObjects];
+}
+
 - (NSMutableArray*)filter:(BOOL (^)(id))pred {
     return [OOOCollections filter:self pred:pred];
 }
