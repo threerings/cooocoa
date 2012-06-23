@@ -3,7 +3,7 @@
 
 #import <UIKit/UIKit.h>
 
-/// An RGBA bitmap
+/// An ARGB bitmap
 @interface OOOBitmap : NSObject {
 @protected
     NSData* _data;

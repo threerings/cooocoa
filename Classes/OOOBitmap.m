@@ -30,67 +30,43 @@
 
 #import "OOOBitmap.h"
 
-static CGContextRef newBitmapRGBA8ContextFromImage (CGImageRef image) {
-	CGContextRef context = NULL;
-	CGColorSpaceRef colorSpace;
-	uint32_t* bitmapData;
+static const CGImageAlphaInfo ALPHA_INFO = kCGImageAlphaPremultipliedFirst;
+static const uint32_t IMG_BYTE_ORDER = kCGBitmapByteOrder32Big;
+
+static NSData* convertUIImageToBitmapRGBA8(UIImage* image) {
+	CGImageRef imageRef = image.CGImage;
 	
-	size_t bitsPerPixel = 32;
-	size_t bitsPerComponent = 8;
-	size_t bytesPerPixel = bitsPerPixel / bitsPerComponent;
+	// Create a bitmap context to draw the uiimage into
+	static const size_t bitsPerPixel = 32;
+	static const size_t bitsPerComponent = 8;
+	static const size_t bytesPerPixel = bitsPerPixel / bitsPerComponent;
 	
-	size_t width = CGImageGetWidth(image);
-	size_t height = CGImageGetHeight(image);
+	size_t width = CGImageGetWidth(imageRef);
+	size_t height = CGImageGetHeight(imageRef);
 	
 	size_t bytesPerRow = width * bytesPerPixel;
-	size_t bufferLength = bytesPerRow * height;
 	
-	colorSpace = CGColorSpaceCreateDeviceRGB();
+	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 	
 	if(!colorSpace) {
 		NSLog(@"Error allocating color space RGB\n");
 		return NULL;
 	}
 	
-	// Allocate memory for image data
-	bitmapData = (uint32_t*)malloc(bufferLength);
-	
-	if(!bitmapData) {
-		NSLog(@"Error allocating memory for bitmap\n");
-		CGColorSpaceRelease(colorSpace);
-		return NULL;
-	}
-	
 	// Create bitmap context
-	context = CGBitmapContextCreate(bitmapData, 
-									width, 
-									height, 
-									bitsPerComponent, 
-									bytesPerRow, 
-									colorSpace, 
-                                    kCGImageAlphaPremultipliedLast);	// RGBA
+	CGContextRef context = CGBitmapContextCreate(NULL, 
+                                                 width, 
+                                                 height, 
+                                                 bitsPerComponent, 
+                                                 bytesPerRow, 
+                                                 colorSpace, 
+                                                 IMG_BYTE_ORDER | ALPHA_INFO);	// ARGB
 	
 	if(!context) {
-		free(bitmapData);
 		NSLog(@"Bitmap context not created");
 	}
 	
 	CGColorSpaceRelease(colorSpace);
-	
-	return context;	
-}
-
-static NSData* convertUIImageToBitmapRGBA8(UIImage* image) {
-	CGImageRef imageRef = image.CGImage;
-	
-	// Create a bitmap context to draw the uiimage into
-	CGContextRef context = newBitmapRGBA8ContextFromImage(imageRef);
-	if(!context) {
-		return nil;
-	}
-	
-	size_t width = CGImageGetWidth(imageRef);
-	size_t height = CGImageGetHeight(imageRef);
 	
 	// Draw image into the context to get the raw image data
 	CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
@@ -99,7 +75,6 @@ static NSData* convertUIImageToBitmapRGBA8(UIImage* image) {
 	unsigned char* bitmapData = (unsigned char*)CGBitmapContextGetData(context);
 	
 	// Copy the data
-	size_t bytesPerRow = CGBitmapContextGetBytesPerRow(context);
     size_t totalBytes = sizeof(unsigned char) * bytesPerRow * height;
     NSData* data = [NSData dataWithBytes:bitmapData length:totalBytes];
 	CGContextRelease(context);
@@ -114,6 +89,7 @@ static NSData* convertUIImageToBitmapRGBA8(UIImage* image) {
 
 - (id)initWithData:(NSData*)data width:(NSUInteger)width height:(NSUInteger)height {
     if ((self = [super init])) {
+        NSAssert(data.length == width * height * 4, @"bad data length (expected=%d, actual=%d)", width * height * 4, data.length);
         _data = data;
         _width = width;
         _height = height;
@@ -137,7 +113,6 @@ static NSData* convertUIImageToBitmapRGBA8(UIImage* image) {
 }
 
 - (UIImage*)createUIImage {
-    size_t bufferLength = _width * _height * 4;
 	CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, _data.bytes, _data.length, NULL);
 	size_t bitsPerComponent = 8;
 	size_t bitsPerPixel = 32;
@@ -149,7 +124,7 @@ static NSData* convertUIImageToBitmapRGBA8(UIImage* image) {
 		CGDataProviderRelease(provider);
 		return nil;
 	}
-	CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaPremultipliedLast;
+	CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault | ALPHA_INFO;
 	CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
 	
 	CGImageRef iref = CGImageCreate(_width, 
@@ -163,29 +138,14 @@ static NSData* convertUIImageToBitmapRGBA8(UIImage* image) {
 									NULL,		// decode
 									YES,			// should interpolate
 									renderingIntent);
-    
-	uint32_t* pixels = (uint32_t*)malloc(bufferLength);
 	
-	if(pixels == NULL) {
-		NSLog(@"Error: Memory not allocated for bitmap");
-		CGDataProviderRelease(provider);
-		CGColorSpaceRelease(colorSpaceRef);
-		CGImageRelease(iref);		
-		return nil;
-	}
-	
-	CGContextRef context = CGBitmapContextCreate(pixels, 
+	CGContextRef context = CGBitmapContextCreate(NULL, 
 												 _width, 
 												 _height, 
 												 bitsPerComponent, 
 												 bytesPerRow, 
 												 colorSpaceRef,
                                                  bitmapInfo);
-	
-	if(context == NULL) {
-		NSLog(@"Error context not created");
-		free(pixels);
-	}
 	
 	UIImage* image = nil;
 	if(context) {
@@ -209,9 +169,6 @@ static NSData* convertUIImageToBitmapRGBA8(UIImage* image) {
 	CGImageRelease(iref);
 	CGDataProviderRelease(provider);
 	
-	if(pixels) {
-		free(pixels);
-	}	
 	return image;
 }
 
