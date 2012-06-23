@@ -28,38 +28,9 @@
  *
  */
 
-#import "OOOImages.h"
+#import "OOOBitmap.h"
 
-@implementation OOOImages
-
-+ (NSData*)convertUIImageToBitmapRGBA8:(UIImage*)image {
-	CGImageRef imageRef = image.CGImage;
-	
-	// Create a bitmap context to draw the uiimage into
-	CGContextRef context = [self newBitmapRGBA8ContextFromImage:imageRef];
-	if(!context) {
-		return nil;
-	}
-	
-	size_t width = CGImageGetWidth(imageRef);
-	size_t height = CGImageGetHeight(imageRef);
-	
-	// Draw image into the context to get the raw image data
-	CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
-	
-	// Get a pointer to the data	
-	unsigned char* bitmapData = (unsigned char*)CGBitmapContextGetData(context);
-	
-	// Copy the data
-	size_t bytesPerRow = CGBitmapContextGetBytesPerRow(context);
-    size_t totalBytes = sizeof(unsigned char) * bytesPerRow * height;
-    NSData* data = [NSData dataWithBytes:bitmapData length:totalBytes];
-	CGContextRelease(context);
-	
-	return data;	
-}
-
-+ (CGContextRef)newBitmapRGBA8ContextFromImage:(CGImageRef)image {
+static CGContextRef newBitmapRGBA8ContextFromImage (CGImageRef image) {
 	CGContextRef context = NULL;
 	CGColorSpaceRef colorSpace;
 	uint32_t* bitmapData;
@@ -109,15 +80,68 @@
 	return context;	
 }
 
-+ (UIImage*)convertBitmapRGBA8ToUIImage:(NSData*)buffer 
-                              withWidth:(int)width
-                             withHeight:(int)height {
+static NSData* convertUIImageToBitmapRGBA8(UIImage* image) {
+	CGImageRef imageRef = image.CGImage;
 	
-	size_t bufferLength = width * height * 4;
-	CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, buffer.bytes, buffer.length, NULL);
+	// Create a bitmap context to draw the uiimage into
+	CGContextRef context = newBitmapRGBA8ContextFromImage(imageRef);
+	if(!context) {
+		return nil;
+	}
+	
+	size_t width = CGImageGetWidth(imageRef);
+	size_t height = CGImageGetHeight(imageRef);
+	
+	// Draw image into the context to get the raw image data
+	CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
+	
+	// Get a pointer to the data	
+	unsigned char* bitmapData = (unsigned char*)CGBitmapContextGetData(context);
+	
+	// Copy the data
+	size_t bytesPerRow = CGBitmapContextGetBytesPerRow(context);
+    size_t totalBytes = sizeof(unsigned char) * bytesPerRow * height;
+    NSData* data = [NSData dataWithBytes:bitmapData length:totalBytes];
+	CGContextRelease(context);
+	
+	return data;	
+}
+
+@implementation OOOBitmap
+
+@synthesize width = _width;
+@synthesize height = _height;
+
+- (id)initWithData:(NSData*)data width:(NSUInteger)width height:(NSUInteger)height {
+    if ((self = [super init])) {
+        _data = data;
+        _width = width;
+        _height = height;
+    }
+    return self;
+}
+
+- (id)initWithUIImage:(UIImage*)image {
+    return [self initWithData:convertUIImageToBitmapRGBA8(image)
+                        width:ceilf(image.size.width * image.scale) 
+                       height:ceilf(image.size.height * image.scale)];
+}
+
+- (uint32_t*)pixels {
+    return (uint32_t*)_data.bytes;
+}
+
+- (uint32_t)pixelAtX:(NSUInteger)x y:(NSUInteger)y {
+    NSAssert(x < _width && y < _height, @"Pixel location out of bounds (%d,%d)", x, y);
+    return ((uint32_t*)_data.bytes)[(y * _width) + x];
+}
+
+- (UIImage*)createUIImage {
+    size_t bufferLength = _width * _height * 4;
+	CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, _data.bytes, _data.length, NULL);
 	size_t bitsPerComponent = 8;
 	size_t bitsPerPixel = 32;
-	size_t bytesPerRow = 4 * width;
+	size_t bytesPerRow = 4 * _width;
 	
 	CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
 	if(colorSpaceRef == NULL) {
@@ -128,8 +152,8 @@
 	CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaPremultipliedLast;
 	CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
 	
-	CGImageRef iref = CGImageCreate(width, 
-									height, 
+	CGImageRef iref = CGImageCreate(_width, 
+									_height, 
 									bitsPerComponent, 
 									bitsPerPixel, 
 									bytesPerRow, 
@@ -139,7 +163,7 @@
 									NULL,		// decode
 									YES,			// should interpolate
 									renderingIntent);
-		
+    
 	uint32_t* pixels = (uint32_t*)malloc(bufferLength);
 	
 	if(pixels == NULL) {
@@ -151,8 +175,8 @@
 	}
 	
 	CGContextRef context = CGBitmapContextCreate(pixels, 
-												 width, 
-												 height, 
+												 _width, 
+												 _height, 
 												 bitsPerComponent, 
 												 bytesPerRow, 
 												 colorSpaceRef,
@@ -165,7 +189,7 @@
 	
 	UIImage* image = nil;
 	if(context) {
-		CGContextDrawImage(context, CGRectMake(0.0f, 0.0f, width, height), iref);
+		CGContextDrawImage(context, CGRectMake(0.0f, 0.0f, _width, _height), iref);
 		
 		CGImageRef imageRef = CGBitmapContextCreateImage(context);
 		

@@ -52,8 +52,8 @@
 		22E7697B15575C8A006E96DB /* OOOFloatRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7697715575C8A006E96DB /* OOOFloatRange.m */; };
 		22E7697C15575C8A006E96DB /* OOOIntRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E7697815575C8A006E96DB /* OOOIntRange.h */; };
 		22E7697D15575C8A006E96DB /* OOOIntRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7697915575C8A006E96DB /* OOOIntRange.m */; };
-		22F0A408159530380011CC33 /* OOOImages.h in Headers */ = {isa = PBXBuildFile; fileRef = 22F0A406159530380011CC33 /* OOOImages.h */; };
-		22F0A409159530380011CC33 /* OOOImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0A407159530380011CC33 /* OOOImages.m */; };
+		22F0A410159558130011CC33 /* OOOBitmap.h in Headers */ = {isa = PBXBuildFile; fileRef = 22F0A40E159558120011CC33 /* OOOBitmap.h */; };
+		22F0A411159558130011CC33 /* OOOBitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0A40F159558130011CC33 /* OOOBitmap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,8 +114,8 @@
 		22E7697715575C8A006E96DB /* OOOFloatRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOFloatRange.m; sourceTree = "<group>"; };
 		22E7697815575C8A006E96DB /* OOOIntRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOIntRange.h; sourceTree = "<group>"; };
 		22E7697915575C8A006E96DB /* OOOIntRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOIntRange.m; sourceTree = "<group>"; };
-		22F0A406159530380011CC33 /* OOOImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOImages.h; sourceTree = "<group>"; };
-		22F0A407159530380011CC33 /* OOOImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOImages.m; sourceTree = "<group>"; };
+		22F0A40E159558120011CC33 /* OOOBitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOBitmap.h; sourceTree = "<group>"; };
+		22F0A40F159558130011CC33 /* OOOBitmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOBitmap.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +222,8 @@
 		229E281415574972001452E5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				22F0A40E159558120011CC33 /* OOOBitmap.h */,
+				22F0A40F159558130011CC33 /* OOOBitmap.m */,
 				22E43A841559BEE8003A43B8 /* OOOBoxed.h */,
 				22E43A851559BEE8003A43B8 /* OOOBoxed.m */,
 				229E2815155749A6001452E5 /* OOOCollections.h */,
@@ -232,8 +234,6 @@
 				229E2818155749A6001452E5 /* OOOEnum.m */,
 				22E7697615575C8A006E96DB /* OOOFloatRange.h */,
 				22E7697715575C8A006E96DB /* OOOFloatRange.m */,
-				22F0A406159530380011CC33 /* OOOImages.h */,
-				22F0A407159530380011CC33 /* OOOImages.m */,
 				22E7697815575C8A006E96DB /* OOOIntRange.h */,
 				22E7697915575C8A006E96DB /* OOOIntRange.m */,
 				229E2819155749A6001452E5 /* OOOMacros.h */,
@@ -288,7 +288,7 @@
 				22E43A861559BEE8003A43B8 /* OOOBoxed.h in Headers */,
 				22A87047156AEAE300101F6D /* OOOEasing.h in Headers */,
 				22A8704A156AEAE300101F6D /* OOOPowerEaser.h in Headers */,
-				22F0A408159530380011CC33 /* OOOImages.h in Headers */,
+				22F0A410159558130011CC33 /* OOOBitmap.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +408,7 @@
 				22E43A871559BEE8003A43B8 /* OOOBoxed.m in Sources */,
 				22A87048156AEAE300101F6D /* OOOEasing.m in Sources */,
 				22A8704B156AEAE300101F6D /* OOOPowerEaser.m in Sources */,
-				22F0A409159530380011CC33 /* OOOImages.m in Sources */,
+				22F0A411159558130011CC33 /* OOOBitmap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
