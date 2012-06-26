@@ -33,4 +33,8 @@
     return nil;
 }
 
++ (NSEnumerator*)singleton:(id)object {
+    return [NSArray arrayWithObject:object];
+}
+
 @end

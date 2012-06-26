@@ -9,4 +9,7 @@
 + (NSMutableArray*)map:(id<NSFastEnumeration>)collection transformer:(id (^)(id object))transformer;
 + (id)findObject:(id<NSFastEnumeration>)collection pred:(BOOL (^)(id object))pred;
 
+/// Returns an NSEnumerator that will enumerate over a single object
++ (NSEnumerator*)singleton:(id)object;
+
 @end
