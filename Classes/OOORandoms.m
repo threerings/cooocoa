@@ -58,6 +58,7 @@
 #define LOWER_MASK 0x7fffffffUL /* least significant r bits */
 
 @interface OOORandoms () {
+    unsigned int _seed;
     unsigned long mt[N]; /* the array for the state vector  */
     int mti;//=N+1; /* mti==N+1 means mt[N] is not initialized */
 }
@@ -72,13 +73,7 @@
 
 @implementation OOORandoms
 
-- (id)init {
-    if ((self = [super init])) {
-        mti = N+1;
-        [self setSeed:(unsigned int)time(0)];
-    }
-    return self;
-}
+@synthesize seed = _seed;
 
 - (id)initWithSeed:(unsigned int)seed {
     if ((self = [super init])) {
@@ -88,7 +83,12 @@
     return self;
 }
 
+- (id)init {
+    return [self initWithSeed:(unsigned int)time(0)];
+}
+
 - (void)setSeed:(unsigned int)seed {
+    _seed = seed;
     [self init_genrand:seed];
 }
 

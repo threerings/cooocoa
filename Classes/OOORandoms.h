@@ -3,9 +3,10 @@
 
 @interface OOORandoms : NSObject
 
+@property (nonatomic,assign) unsigned int seed;
+
 - (id)init;
 - (id)initWithSeed:(unsigned int)seed;
-- (void)setSeed:(unsigned int)seed;
 
 /// Returns a pseudorandom, uniformly distributed <code>int</code> value between <code>0</code>
 /// (inclusive) and <code>high</code> (exclusive).
