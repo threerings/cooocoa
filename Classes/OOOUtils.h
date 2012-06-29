@@ -8,3 +8,6 @@ NSComparisonResult OOOCompareBooleans (BOOL a, BOOL b);
 NSComparisonResult OOOCompareInts (int a, int b);
 NSComparisonResult OOOCompareFloats (float a, float b);
 NSComparisonResult OOOCompareDoubles (double a, double b);
+
+/// Executes the given block, and returns the execution time (in seconds)
+double OOOMeasureTime (void(^block)());
