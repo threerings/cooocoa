@@ -33,7 +33,7 @@
     return nil;
 }
 
-+ (NSEnumerator*)singleton:(id)object {
++ (id<NSFastEnumeration>)singleton:(id)object {
     return [NSArray arrayWithObject:object];
 }
 

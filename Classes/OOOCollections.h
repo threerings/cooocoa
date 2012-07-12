@@ -10,6 +10,6 @@
 + (id)findObject:(id<NSFastEnumeration>)collection pred:(BOOL (^)(id object))pred;
 
 /// Returns an NSEnumerator that will enumerate over a single object
-+ (NSEnumerator*)singleton:(id)object;
++ (id<NSFastEnumeration>)singleton:(id)object;
 
 @end
