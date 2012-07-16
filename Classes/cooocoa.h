@@ -18,6 +18,7 @@
 #import "OOOFloatRange.h"
 #import "OOOIntRange.h"
 #import "OOOMacros.h"
+#import "OOOMath.h"
 #import "OOORandoms.h"
 #import "OOORegistration.h"
 #import "OOOTypes.h"
