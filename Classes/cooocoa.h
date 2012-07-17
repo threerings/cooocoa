@@ -15,6 +15,7 @@
 #import "OOOCollections.h"
 #import "OOOEasing.h"
 #import "OOOEnum.h"
+#import "OOOFlags.h"
 #import "OOOFloatRange.h"
 #import "OOOIntRange.h"
 #import "OOOMacros.h"
