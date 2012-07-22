@@ -40,7 +40,7 @@ BOOL OOOIsFlagSet (uint32_t bits, int flag) {
 - (BOOL)isEqual:(id)object {
     if (object == self) {
         return YES;
-    } else if (!object || ![object isKindOfClass:[self class]]) {
+    } else if (![object isKindOfClass:[self class]]) {
         return NO;
     } else {
         OOOFlags* o = (OOOFlags*)object;
