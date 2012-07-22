@@ -22,8 +22,18 @@ BOOL OOOIsFlagSet (uint32_t bits, int flag) {
 
 @synthesize bits = _bits;
 
+- (BOOL)isSet:(int)flag { return OOOIsFlagSet(_bits, flag); }
+
+@end
+
+@implementation OOOMutableFlags
+
+@dynamic bits;
+
+- (void)setBits:(uint32_t)bits { _bits = bits; }
+
 - (void)setFlag:(int)flag { _bits = OOOSetFlag(_bits, flag); }
 - (void)clearFlag:(int)flag { _bits = OOOClearFlag(_bits, flag); }
-- (BOOL)isSet:(int)flag { return OOOIsFlagSet(_bits, flag); }
+
 
 @end

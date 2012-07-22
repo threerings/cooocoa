@@ -7,11 +7,18 @@
     uint32_t _bits;
 }
 
+@property (nonatomic,readonly) uint32_t bits;
+
+- (BOOL)isSet:(int)flag;
+
+@end
+
+@interface OOOMutableFlags : OOOFlags
+
 @property (nonatomic,assign) uint32_t bits;
 
 - (void)setFlag:(int)flag;
 - (void)clearFlag:(int)flag;
-- (BOOL)isSet:(int)flag;
 
 @end
 
