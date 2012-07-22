@@ -22,7 +22,39 @@ BOOL OOOIsFlagSet (uint32_t bits, int flag) {
 
 @synthesize bits = _bits;
 
-- (BOOL)isSet:(int)flag { return OOOIsFlagSet(_bits, flag); }
+- (id)initWithBits:(uint32_t)bits {
+    if ((self = [super init])) {
+        _bits = bits;
+    }
+    return self;
+}
+
+- (id)init {
+    return [self initWithBits:0];
+}
+
+- (BOOL)isSet:(int)flag { 
+    return OOOIsFlagSet(_bits, flag); 
+}
+
+- (BOOL)isEqual:(id)object {
+    if (object == self) {
+        return YES;
+    } else if (!object || ![object isKindOfClass:[self class]]) {
+        return NO;
+    } else {
+        OOOFlags* o = (OOOFlags*)object;
+        return (_bits == o->_bits);
+    }
+}
+
+- (NSUInteger)hash {
+    return _bits;
+}
+
+- (id)copyWithZone:(NSZone*)zone {
+    return [[[self class] allocWithZone:zone] initWithBits:_bits];
+}
 
 @end
 
