@@ -352,7 +352,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OOO;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "Three Rings Design";
 			};
 			buildConfigurationList = 229E27AB1557473C001452E5 /* Build configuration list for PBXProject "cooocoa" */;
