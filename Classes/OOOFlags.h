@@ -19,6 +19,8 @@
 
 @property (nonatomic,assign) uint32_t bits;
 
+- (void)setFlag:(int)flag value:(BOOL)value;
+
 - (void)setFlag:(int)flag;
 - (void)clearFlag:(int)flag;
 

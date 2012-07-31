@@ -63,9 +63,12 @@ BOOL OOOIsFlagSet (uint32_t bits, int flag) {
 @dynamic bits;
 
 - (void)setBits:(uint32_t)bits { _bits = bits; }
+- (void)setFlag:(int)flag { [self setFlag:flag value:YES]; }
+- (void)clearFlag:(int)flag { [self setFlag:flag value:NO]; }
 
-- (void)setFlag:(int)flag { _bits = OOOSetFlag(_bits, flag); }
-- (void)clearFlag:(int)flag { _bits = OOOClearFlag(_bits, flag); }
+- (void)setFlag:(int)flag value:(BOOL)value {
+    _bits = (value ? OOOSetFlag(_bits, flag) : OOOClearFlag(_bits, flag));
+}
 
 
 @end
