@@ -43,3 +43,7 @@
 
 /// Compile-time assertion
 #define OOO_STATIC_ASSERT(e) enum { OOO_EXPAND_THEN_CONCAT(ASSERT_line_,__LINE__) = 1/!!(e) }
+
+/// Array length
+/// (extra fanciness causes a divide-by-zero compile error on anything that's not a static array)
+#define OOO_ARRAY_LENGTH(x) ((sizeof(x)/sizeof(0[x])) / ((size_t)(!(sizeof(x) % sizeof(0[x])))))
