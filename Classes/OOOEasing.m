@@ -9,7 +9,7 @@
 
 @implementation OOOLinearEaser
 - (float)interpolate:(float)from to:(float)to dt:(float)dt t:(float)t {
-    if (t == 0) { 
+    if (t == 0) {
         return to;
     }
     return from + ((to - from) * (dt / t));

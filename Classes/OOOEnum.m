@@ -37,7 +37,7 @@
         if ([[OOOEnum blocked] containsObject:clazz]) {
             [NSException raise:NSGenericException format:@"You may not just construct an enum!"];
         }
-        
+
         NSMutableArray* array = [[OOOEnum enums] objectForKey:clazz];
         if (array == nil) {
             array = [NSMutableArray array];
@@ -85,9 +85,9 @@
 
 + (void)initialize {
     static NSString* PREFIX = @"OOOEnum_Init";
-    
+
     if (self != [OOOEnum class]) {
-        // walk the class methods 
+        // walk the class methods
         unsigned int methodCount = 0;
         Method* mlist = class_copyMethodList(object_getClass(self), &methodCount);
         for (unsigned int ii = 0; ii < methodCount; ++ii) {
@@ -100,7 +100,7 @@
         }
         free(mlist);
     }
-        
+
     [[OOOEnum blocked] addObject:self];
 }
 

@@ -55,11 +55,11 @@
 - (float)floatAttribute:(NSString*)name defaultVal:(float)defaultVal required:(BOOL)required {
     NSString* attr = [self getAttr:name required:required];
     if (attr == nil) return defaultVal;
-    
+
     @try {
         return [attr requireFloatValue];
     } @catch (NSException* e) {
-        @throw [GDataXMLException withElement:self 
+        @throw [GDataXMLException withElement:self
                                        reason:@"Error reading attribute '%@': %@", name, e.reason];
     }
 }
@@ -75,11 +75,11 @@
 - (int)intAttribute:(NSString*)name defaultVal:(int)defaultVal required:(BOOL)required {
     NSString* attr = [self getAttr:name required:required];
     if (attr == nil) return defaultVal;
-    
+
     @try {
         return [attr requireIntValue];
     } @catch (NSException* e) {
-        @throw [GDataXMLException withElement:self 
+        @throw [GDataXMLException withElement:self
                                        reason:@"Error reading attribute '%@': %@", name, e.reason];
     }
 }
@@ -95,11 +95,11 @@
 - (BOOL)boolAttribute:(NSString*)name defaultVal:(BOOL)defaultVal required:(BOOL)required {
     NSString* attr = [self getAttr:name required:required];
     if (attr == nil) return defaultVal;
-    
+
     @try {
         return [attr requireBoolValue];
     } @catch (NSException* e) {
-        @throw [GDataXMLException withElement:self 
+        @throw [GDataXMLException withElement:self
                                        reason:@"Error reading attribute '%@': %@", name, e.reason];
     }
 }
@@ -117,7 +117,7 @@
     if (attr == nil) return defaultVal;
     id theEnum = [type valueOf:attr];
     if (theEnum == nil) {
-        @throw [GDataXMLException withElement:self 
+        @throw [GDataXMLException withElement:self
            reason:@"Error reading attribute '%@': could not convert '%@' to %@", name, attr, type];
     }
     return theEnum;

@@ -33,8 +33,8 @@ BOOL OOOIsFlagSet (uint32_t bits, int flag) {
     return [self initWithBits:0];
 }
 
-- (BOOL)isSet:(int)flag { 
-    return OOOIsFlagSet(_bits, flag); 
+- (BOOL)isSet:(int)flag {
+    return OOOIsFlagSet(_bits, flag);
 }
 
 - (BOOL)isEqual:(id)object {

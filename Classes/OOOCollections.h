@@ -5,7 +5,7 @@
 
 @interface OOOCollections : NSObject
 
-/// Returns an array containing all objects in the collection 
+/// Returns an array containing all objects in the collection
 /// (nil objects will be converted to NSNull)
 + (NSMutableArray*)allObjects:(id<NSFastEnumeration>)collection;
 

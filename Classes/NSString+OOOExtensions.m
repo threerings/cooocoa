@@ -11,7 +11,7 @@
     if (![scanner scanDouble:&retVal] || !scanner.isAtEnd) {
         [NSException raise:NSGenericException format:@"%@ could not be converted to a double", self];
     }
-    
+
     return retVal;
 }
 
@@ -21,7 +21,7 @@
     if (![scanner scanFloat:&retVal] || !scanner.isAtEnd) {
         [NSException raise:NSGenericException format:@"%@ could not be converted to a float", self];
     }
-    
+
     return retVal;
 }
 
@@ -31,7 +31,7 @@
     if (![scanner scanInt:&retVal] || !scanner.isAtEnd) {
         [NSException raise:NSGenericException format:@"%@ could not be converted to a int", self];
     }
-    
+
     return retVal;
 }
 
@@ -44,7 +44,7 @@
     } else {
         [NSException raise:NSGenericException format:@"%@ could not be converted to a BOOL", self];
     }
-    
+
     return NO;
 }
 

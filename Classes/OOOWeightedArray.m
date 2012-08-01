@@ -58,10 +58,10 @@
     if (_objects.count == 0) {
         return nil;
     }
-    
+
     float max = ((WeightedObject*)[_objects lastObject]).max;
     float val = [_rands getFloatLow:0 high:max];
-    
+
     // binary-search the WeightedObjects
     int loIdx = 0;
     int hiIdx = _objects.count - 1;

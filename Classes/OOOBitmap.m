@@ -35,51 +35,51 @@ static const uint32_t IMG_BYTE_ORDER = kCGBitmapByteOrder32Big;
 
 static NSData* convertUIImageToBitmapRGBA8(UIImage* image) {
 	CGImageRef imageRef = image.CGImage;
-	
+
 	// Create a bitmap context to draw the uiimage into
 	static const size_t bitsPerPixel = 32;
 	static const size_t bitsPerComponent = 8;
 	static const size_t bytesPerPixel = bitsPerPixel / bitsPerComponent;
-	
+
 	size_t width = CGImageGetWidth(imageRef);
 	size_t height = CGImageGetHeight(imageRef);
-	
+
 	size_t bytesPerRow = width * bytesPerPixel;
-	
+
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-	
+
 	if(!colorSpace) {
 		NSLog(@"Error allocating color space RGB\n");
 		return NULL;
 	}
-	
+
 	// Create bitmap context
-	CGContextRef context = CGBitmapContextCreate(NULL, 
-                                                 width, 
-                                                 height, 
-                                                 bitsPerComponent, 
-                                                 bytesPerRow, 
-                                                 colorSpace, 
+	CGContextRef context = CGBitmapContextCreate(NULL,
+                                                 width,
+                                                 height,
+                                                 bitsPerComponent,
+                                                 bytesPerRow,
+                                                 colorSpace,
                                                  IMG_BYTE_ORDER | ALPHA_INFO);	// ARGB
-	
+
 	if(!context) {
 		NSLog(@"Bitmap context not created");
 	}
-	
+
 	CGColorSpaceRelease(colorSpace);
-	
+
 	// Draw image into the context to get the raw image data
 	CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
-	
-	// Get a pointer to the data	
+
+	// Get a pointer to the data
 	unsigned char* bitmapData = (unsigned char*)CGBitmapContextGetData(context);
-	
+
 	// Copy the data
     size_t totalBytes = sizeof(unsigned char) * bytesPerRow * height;
     NSData* data = [NSData dataWithBytes:bitmapData length:totalBytes];
 	CGContextRelease(context);
-	
-	return data;	
+
+	return data;
 }
 
 @implementation OOOBitmap
@@ -99,7 +99,7 @@ static NSData* convertUIImageToBitmapRGBA8(UIImage* image) {
 
 - (id)initWithUIImage:(UIImage*)image {
     return [self initWithData:convertUIImageToBitmapRGBA8(image)
-                        width:ceilf(image.size.width * image.scale) 
+                        width:ceilf(image.size.width * image.scale)
                        height:ceilf(image.size.height * image.scale)];
 }
 
@@ -117,7 +117,7 @@ static NSData* convertUIImageToBitmapRGBA8(UIImage* image) {
 	size_t bitsPerComponent = 8;
 	size_t bitsPerPixel = 32;
 	size_t bytesPerRow = 4 * _width;
-	
+
 	CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
 	if(colorSpaceRef == NULL) {
 		NSLog(@"Error allocating color space");
@@ -126,33 +126,33 @@ static NSData* convertUIImageToBitmapRGBA8(UIImage* image) {
 	}
 	CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault | ALPHA_INFO;
 	CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
-	
-	CGImageRef iref = CGImageCreate(_width, 
-									_height, 
-									bitsPerComponent, 
-									bitsPerPixel, 
-									bytesPerRow, 
-									colorSpaceRef, 
-									bitmapInfo, 
+
+	CGImageRef iref = CGImageCreate(_width,
+									_height,
+									bitsPerComponent,
+									bitsPerPixel,
+									bytesPerRow,
+									colorSpaceRef,
+									bitmapInfo,
 									provider,	// data provider
 									NULL,		// decode
 									YES,			// should interpolate
 									renderingIntent);
-	
-	CGContextRef context = CGBitmapContextCreate(NULL, 
-												 _width, 
-												 _height, 
-												 bitsPerComponent, 
-												 bytesPerRow, 
+
+	CGContextRef context = CGBitmapContextCreate(NULL,
+												 _width,
+												 _height,
+												 bitsPerComponent,
+												 bytesPerRow,
 												 colorSpaceRef,
                                                  bitmapInfo);
-	
+
 	UIImage* image = nil;
 	if(context) {
 		CGContextDrawImage(context, CGRectMake(0.0f, 0.0f, _width, _height), iref);
-		
+
 		CGImageRef imageRef = CGBitmapContextCreateImage(context);
-		
+
 		// Support both iPad 3.2 and iPhone 4 Retina displays with the correct scale
 		if([UIImage respondsToSelector:@selector(imageWithCGImage:scale:orientation:)]) {
 			float scale = [[UIScreen mainScreen] scale];
@@ -160,15 +160,15 @@ static NSData* convertUIImageToBitmapRGBA8(UIImage* image) {
 		} else {
 			image = [UIImage imageWithCGImage:imageRef];
 		}
-		
-		CGImageRelease(imageRef);	
-		CGContextRelease(context);	
+
+		CGImageRelease(imageRef);
+		CGContextRelease(context);
 	}
-	
+
 	CGColorSpaceRelease(colorSpaceRef);
 	CGImageRelease(iref);
 	CGDataProviderRelease(provider);
-	
+
 	return image;
 }
 
