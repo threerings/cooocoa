@@ -17,8 +17,8 @@
 })
 
 /// Creates an NSString from a format string and parameters.
-/// - (NSString*)getMyFormatString:(NSString*)format, ... { return OOO_FORMAT_TO_STRING(format); }
-#define OOO_FORMAT_TO_STRING(format) ({ \
+/// - (NSString*)getMyFormatString:(NSString*)format, ... { return OOO_FORMAT_TO_NSSTRING(format); }
+#define OOO_FORMAT_TO_NSSTRING(format) ({ \
     va_list args; \
     va_start(args, format); \
     NSString* string = [[NSString alloc] initWithFormat:format arguments:args]; \

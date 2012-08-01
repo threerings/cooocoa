@@ -10,11 +10,11 @@ static NSString * const NAME = @"XMLException";
 @implementation GDataXMLException
 
 + (GDataXMLException*)withReason:(NSString*)format, ... {
-    return [[GDataXMLException alloc] initWithReason:OOO_FORMAT_TO_STRING(format)];
+    return [[GDataXMLException alloc] initWithReason:OOO_FORMAT_TO_NSSTRING(format)];
 }
 
 + (GDataXMLException*)withElement:(GDataXMLElement*)badElement reason:(NSString*)format, ... {
-    NSString* reason = OOO_FORMAT_TO_STRING(format);
+    NSString* reason = OOO_FORMAT_TO_NSSTRING(format);
 
     if (badElement != nil) {
         reason = [NSString stringWithFormat:@"%@\b%@", reason, [badElement description]];
