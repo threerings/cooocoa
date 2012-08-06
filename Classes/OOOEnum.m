@@ -33,15 +33,16 @@
 
 - (id)init {
     if ((self = [super init])) {
-        Class clazz = [self class];
-        if ([[OOOEnum blocked] containsObject:clazz]) {
+        if ([[OOOEnum blocked] containsObject:[self class]]) {
             [NSException raise:NSGenericException format:@"You may not just construct an enum!"];
         }
 
-        NSMutableArray* array = [[OOOEnum enums] objectForKey:clazz];
+        NSMutableArray* array = [[OOOEnum enums] objectForKey:[self class]];
         if (array == nil) {
             array = [NSMutableArray array];
-            [[OOOEnum enums] setObject:array forKey:clazz];
+            // 'Class' is opaque, but we know it conforms to NSCopying because the docs tell us so:
+            // http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html#//apple_ref/doc/uid/20000050-copyWithZone_
+            [[OOOEnum enums] setObject:array forKey:(id<NSCopying>)[self class]];
         }
         [array addObject:self];
     }
