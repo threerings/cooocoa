@@ -5,6 +5,17 @@
 
 @implementation NSString (OOOExtensions)
 
+- (BOOL)startsWith:(NSString*)substring {
+    return ([self rangeOfString:substring].location == 0);
+}
+
+- (BOOL)endsWith:(NSString*)substring {
+    if (substring.length > self.length) {
+        return NO;
+    }
+    return ([self rangeOfString:substring].location == self.length - substring.length);
+}
+
 - (double)requireDoubleValue {
     NSScanner* scanner = [[NSScanner alloc] initWithString:self];
     double retVal;

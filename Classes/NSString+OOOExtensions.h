@@ -3,6 +3,12 @@
 
 @interface NSString (OOOExtensions)
 
+/// Returns YES if the string begins with the given substring
+- (BOOL)startsWith:(NSString*)substring;
+
+/// Returns YES if the string ends with the given substring
+- (BOOL)endsWith:(NSString*)substring;
+
 /// Returns the double represented by the string.
 /// Throws an exception if the string cannot be converted to a double, or contains extra characters.
 - (double)requireDoubleValue;
