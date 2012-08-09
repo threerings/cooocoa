@@ -16,6 +16,14 @@
 /// <code>low</code> (inclusive) and <code>high</code> (exclusive).
 - (int)getIntLow:(int)low high:(int)high;
 
+/// Returns a pseudorandom, uniformly distributed <code>unsigned int</code> value
+/// between <code>0</code> (inclusive) and <code>high</code> (exclusive).
+- (unsigned int)getUint:(unsigned int)high;
+
+/// Returns a pseudorandom, uniformly distributed <code>unsigned int</code> value between
+/// <code>low</code> (inclusive) and <code>high</code> (exclusive).
+- (unsigned int)getUintLow:(unsigned int)low high:(unsigned int)high;
+
 /// Returns a pseudorandom, uniformly distributed <code>float</code> value between
 /// <code>0.0</code> (inclusive) and the <code>high</code> (exclusive).
 - (float)getFloat:(float)high;

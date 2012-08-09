@@ -100,6 +100,14 @@
     return low + [self getInt:high - low];
 }
 
+- (unsigned int)getUint:(unsigned int)high {
+    return (unsigned int) ([self genrand_int32] % (unsigned long) high);
+}
+
+- (unsigned int)getUintLow:(unsigned int)low high:(unsigned int)high {
+    return low + [self getUint:high - low];
+}
+
 - (float)getFloat:(float)high {
     return [self genrand_real2] * high;
 }
