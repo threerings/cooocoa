@@ -14,6 +14,10 @@
 		2231637715B4FA7900F85F32 /* OOOFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = 2231637515B4FA7900F85F32 /* OOOFlags.h */; };
 		2231637815B4FA7900F85F32 /* OOOFlags.m in Sources */ = {isa = PBXBuildFile; fileRef = 2231637615B4FA7900F85F32 /* OOOFlags.m */; };
 		225041B8155889B10014FA5D /* OOOTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 225041B7155889B10014FA5D /* OOOTypes.h */; };
+		227F8BEE15DB0092005ADF63 /* OOOKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 227F8BEC15DB0092005ADF63 /* OOOKey.h */; };
+		227F8BEF15DB0092005ADF63 /* OOOKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 227F8BED15DB0092005ADF63 /* OOOKey.m */; };
+		227F8BF615DB37F4005ADF63 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227F8BF515DB37F4005ADF63 /* CoreGraphics.framework */; };
+		227F8BF715DB3819005ADF63 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227F8BF315DB375E005ADF63 /* QuartzCore.framework */; };
 		229E27B51557473D001452E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27B41557473D001452E5 /* Foundation.framework */; };
 		229E27C31557473D001452E5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27C21557473D001452E5 /* SenTestingKit.framework */; };
 		229E27C61557473D001452E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27B41557473D001452E5 /* Foundation.framework */; };
@@ -78,6 +82,10 @@
 		2231637515B4FA7900F85F32 /* OOOFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOFlags.h; sourceTree = "<group>"; };
 		2231637615B4FA7900F85F32 /* OOOFlags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOFlags.m; sourceTree = "<group>"; };
 		225041B7155889B10014FA5D /* OOOTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOTypes.h; sourceTree = "<group>"; };
+		227F8BEC15DB0092005ADF63 /* OOOKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOKey.h; sourceTree = "<group>"; };
+		227F8BED15DB0092005ADF63 /* OOOKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOKey.m; sourceTree = "<group>"; };
+		227F8BF315DB375E005ADF63 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		227F8BF515DB37F4005ADF63 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		229E27B11557473D001452E5 /* libcooocoa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcooocoa.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		229E27B41557473D001452E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		229E27C11557473D001452E5 /* cooocoaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cooocoaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,7 +147,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				227F8BF715DB3819005ADF63 /* QuartzCore.framework in Frameworks */,
 				22E43A341558B4B6003A43B8 /* UIKit.framework in Frameworks */,
+				227F8BF615DB37F4005ADF63 /* CoreGraphics.framework in Frameworks */,
 				229E27C31557473D001452E5 /* SenTestingKit.framework in Frameworks */,
 				229E27C61557473D001452E5 /* Foundation.framework in Frameworks */,
 				229E27C91557473D001452E5 /* libcooocoa.a in Frameworks */,
@@ -174,6 +184,8 @@
 			children = (
 				22E43A331558B4B6003A43B8 /* UIKit.framework */,
 				229E27B41557473D001452E5 /* Foundation.framework */,
+				227F8BF515DB37F4005ADF63 /* CoreGraphics.framework */,
+				227F8BF315DB375E005ADF63 /* QuartzCore.framework */,
 				229E27C21557473D001452E5 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
@@ -246,6 +258,8 @@
 				22E7697715575C8A006E96DB /* OOOFloatRange.m */,
 				22E7697815575C8A006E96DB /* OOOIntRange.h */,
 				22E7697915575C8A006E96DB /* OOOIntRange.m */,
+				227F8BEC15DB0092005ADF63 /* OOOKey.h */,
+				227F8BED15DB0092005ADF63 /* OOOKey.m */,
 				229E2819155749A6001452E5 /* OOOMacros.h */,
 				2230241E15B4B26C00E10499 /* OOOMath.h */,
 				2230241F15B4B26C00E10499 /* OOOMath.m */,
@@ -303,6 +317,7 @@
 				22F0A410159558130011CC33 /* OOOBitmap.h in Headers */,
 				2230242015B4B26C00E10499 /* OOOMath.h in Headers */,
 				2231637715B4FA7900F85F32 /* OOOFlags.h in Headers */,
+				227F8BEE15DB0092005ADF63 /* OOOKey.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +440,7 @@
 				22F0A411159558130011CC33 /* OOOBitmap.m in Sources */,
 				2230242115B4B26C00E10499 /* OOOMath.m in Sources */,
 				2231637815B4FA7900F85F32 /* OOOFlags.m in Sources */,
+				227F8BEF15DB0092005ADF63 /* OOOKey.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +482,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -488,6 +505,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -505,7 +523,6 @@
 				DSTROOT = /tmp/cooocoa.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = cooocoa_Prefix.pch;
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -518,7 +535,6 @@
 				DSTROOT = /tmp/cooocoa.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = cooocoa_Prefix.pch;
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -531,6 +547,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = cooocoa_Prefix.pch;
@@ -546,6 +563,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = cooocoa_Prefix.pch;

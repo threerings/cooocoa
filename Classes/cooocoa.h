@@ -17,6 +17,7 @@
 #import "OOOEnum.h"
 #import "OOOFlags.h"
 #import "OOOFloatRange.h"
+#import "OOOInterned.h"
 #import "OOOIntRange.h"
 #import "OOOMacros.h"
 #import "OOOMath.h"
