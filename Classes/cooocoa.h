@@ -21,6 +21,7 @@
 #import "OOOIntRange.h"
 #import "OOOMacros.h"
 #import "OOOMath.h"
+#import "OOOProfiler.h"
 #import "OOORandoms.h"
 #import "OOORegistration.h"
 #import "OOOTypes.h"

@@ -18,6 +18,7 @@
 		227F8BEF15DB0092005ADF63 /* OOOKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 227F8BED15DB0092005ADF63 /* OOOKey.m */; };
 		227F8BF615DB37F4005ADF63 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227F8BF515DB37F4005ADF63 /* CoreGraphics.framework */; };
 		227F8BF715DB3819005ADF63 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227F8BF315DB375E005ADF63 /* QuartzCore.framework */; };
+		227F8C1615DC4EB7005ADF63 /* OOOProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 227F8BFC15DC3D07005ADF63 /* OOOProfiler.m */; };
 		229E27B51557473D001452E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27B41557473D001452E5 /* Foundation.framework */; };
 		229E27C31557473D001452E5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27C21557473D001452E5 /* SenTestingKit.framework */; };
 		229E27C61557473D001452E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27B41557473D001452E5 /* Foundation.framework */; };
@@ -86,6 +87,8 @@
 		227F8BED15DB0092005ADF63 /* OOOKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOKey.m; sourceTree = "<group>"; };
 		227F8BF315DB375E005ADF63 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		227F8BF515DB37F4005ADF63 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		227F8BFB15DC3D07005ADF63 /* OOOProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOProfiler.h; sourceTree = "<group>"; };
+		227F8BFC15DC3D07005ADF63 /* OOOProfiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOProfiler.m; sourceTree = "<group>"; };
 		229E27B11557473D001452E5 /* libcooocoa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcooocoa.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		229E27B41557473D001452E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		229E27C11557473D001452E5 /* cooocoaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cooocoaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +268,8 @@
 				2230241F15B4B26C00E10499 /* OOOMath.m */,
 				22A87045156AEAE300101F6D /* OOOPowerEaser.h */,
 				22A87046156AEAE300101F6D /* OOOPowerEaser.m */,
+				227F8BFB15DC3D07005ADF63 /* OOOProfiler.h */,
+				227F8BFC15DC3D07005ADF63 /* OOOProfiler.m */,
 				229E281A155749A6001452E5 /* OOORandoms.h */,
 				229E281B155749A6001452E5 /* OOORandoms.m */,
 				222C963A1558812000ED42B1 /* OOORegistration.h */,
@@ -441,6 +446,7 @@
 				2230242115B4B26C00E10499 /* OOOMath.m in Sources */,
 				2231637815B4FA7900F85F32 /* OOOFlags.m in Sources */,
 				227F8BEF15DB0092005ADF63 /* OOOKey.m in Sources */,
+				227F8C1615DC4EB7005ADF63 /* OOOProfiler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
