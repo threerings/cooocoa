@@ -10,7 +10,6 @@
 #import "UIColor+OOOExtensions.h"
 
 // Utils
-#import "OOOBitmap.h"
 #import "OOOBoxed.h"
 #import "OOOCollections.h"
 #import "OOOEasing.h"

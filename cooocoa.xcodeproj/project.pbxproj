@@ -16,7 +16,6 @@
 		225041B8155889B10014FA5D /* OOOTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 225041B7155889B10014FA5D /* OOOTypes.h */; };
 		227F8BEE15DB0092005ADF63 /* OOOKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 227F8BEC15DB0092005ADF63 /* OOOKey.h */; };
 		227F8BEF15DB0092005ADF63 /* OOOKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 227F8BED15DB0092005ADF63 /* OOOKey.m */; };
-		227F8BF615DB37F4005ADF63 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227F8BF515DB37F4005ADF63 /* CoreGraphics.framework */; };
 		227F8C1615DC4EB7005ADF63 /* OOOProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 227F8BFC15DC3D07005ADF63 /* OOOProfiler.m */; };
 		229E27B51557473D001452E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27B41557473D001452E5 /* Foundation.framework */; };
 		229E27C31557473D001452E5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27C21557473D001452E5 /* SenTestingKit.framework */; };
@@ -60,8 +59,6 @@
 		22E7697B15575C8A006E96DB /* OOOFloatRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7697715575C8A006E96DB /* OOOFloatRange.m */; };
 		22E7697C15575C8A006E96DB /* OOOIntRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E7697815575C8A006E96DB /* OOOIntRange.h */; };
 		22E7697D15575C8A006E96DB /* OOOIntRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7697915575C8A006E96DB /* OOOIntRange.m */; };
-		22F0A410159558130011CC33 /* OOOBitmap.h in Headers */ = {isa = PBXBuildFile; fileRef = 22F0A40E159558120011CC33 /* OOOBitmap.h */; };
-		22F0A411159558130011CC33 /* OOOBitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0A40F159558130011CC33 /* OOOBitmap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,8 +128,6 @@
 		22E7697715575C8A006E96DB /* OOOFloatRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOFloatRange.m; sourceTree = "<group>"; };
 		22E7697815575C8A006E96DB /* OOOIntRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOIntRange.h; sourceTree = "<group>"; };
 		22E7697915575C8A006E96DB /* OOOIntRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOIntRange.m; sourceTree = "<group>"; };
-		22F0A40E159558120011CC33 /* OOOBitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOBitmap.h; sourceTree = "<group>"; };
-		22F0A40F159558130011CC33 /* OOOBitmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOBitmap.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +144,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				22E43A341558B4B6003A43B8 /* UIKit.framework in Frameworks */,
-				227F8BF615DB37F4005ADF63 /* CoreGraphics.framework in Frameworks */,
 				229E27C31557473D001452E5 /* SenTestingKit.framework in Frameworks */,
 				229E27C61557473D001452E5 /* Foundation.framework in Frameworks */,
 				229E27C91557473D001452E5 /* libcooocoa.a in Frameworks */,
@@ -241,8 +235,6 @@
 		229E281415574972001452E5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				22F0A40E159558120011CC33 /* OOOBitmap.h */,
-				22F0A40F159558130011CC33 /* OOOBitmap.m */,
 				22E43A841559BEE8003A43B8 /* OOOBoxed.h */,
 				22E43A851559BEE8003A43B8 /* OOOBoxed.m */,
 				229E2815155749A6001452E5 /* OOOCollections.h */,
@@ -315,7 +307,6 @@
 				22E43A861559BEE8003A43B8 /* OOOBoxed.h in Headers */,
 				22A87047156AEAE300101F6D /* OOOEasing.h in Headers */,
 				22A8704A156AEAE300101F6D /* OOOPowerEaser.h in Headers */,
-				22F0A410159558130011CC33 /* OOOBitmap.h in Headers */,
 				2230242015B4B26C00E10499 /* OOOMath.h in Headers */,
 				2231637715B4FA7900F85F32 /* OOOFlags.h in Headers */,
 				227F8BEE15DB0092005ADF63 /* OOOKey.h in Headers */,
@@ -438,7 +429,6 @@
 				22E43A871559BEE8003A43B8 /* OOOBoxed.m in Sources */,
 				22A87048156AEAE300101F6D /* OOOEasing.m in Sources */,
 				22A8704B156AEAE300101F6D /* OOOPowerEaser.m in Sources */,
-				22F0A411159558130011CC33 /* OOOBitmap.m in Sources */,
 				2230242115B4B26C00E10499 /* OOOMath.m in Sources */,
 				2231637815B4FA7900F85F32 /* OOOFlags.m in Sources */,
 				227F8BEF15DB0092005ADF63 /* OOOKey.m in Sources */,
