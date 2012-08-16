@@ -15,8 +15,12 @@ NSComparisonResult OOOCompareInts (int a, int b) { return OOO_COMPARE_NUMBERS(a,
 NSComparisonResult OOOCompareFloats (float a, float b) { return OOO_COMPARE_NUMBERS(a, b); }
 NSComparisonResult OOOCompareDoubles (double a, double b) { return OOO_COMPARE_NUMBERS(a, b); }
 
+double OOOTimeNow () {
+    return CACurrentMediaTime();
+}
+
 double OOOMeasureTime (void(^block)()) {
-    double start = CACurrentMediaTime();
+    double start = OOOTimeNow();
     block();
-    return CACurrentMediaTime() - start;
+    return OOOTimeNow() - start;
 }

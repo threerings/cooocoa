@@ -2,7 +2,7 @@
 // cooocoa - Copyright 2012 Three Rings Design
 
 #import "OOOProfiler.h"
-#import <QuartzCore/QuartzCore.h>
+#import "OOOUtils.h"
 
 @interface OOOPerfTimer : NSObject
 @property (nonatomic,assign) int timesRun;
@@ -17,21 +17,19 @@
 
 static NSMutableDictionary* _timers;
 
-static double Now () { return CACurrentMediaTime(); }
-
 @implementation OOOPerfTimer
 + (void)startTimer:(NSString*)name {
     OOOPerfTimer* timer = [OOOPerfTimer timerNamed:name];
     timer.timesRun++;
     if (timer.concurrentRunCount++ == 0) {
-        timer.startTime = Now();
+        timer.startTime = OOOTimeNow();
     }
 }
 
 + (void)stopTimer:(NSString*)name {
     OOOPerfTimer* timer = [OOOPerfTimer timerNamed:name];
     if (timer.concurrentRunCount > 0 && --timer.concurrentRunCount == 0) {
-        timer.totalTime += Now() - timer.startTime;
+        timer.totalTime += OOOTimeNow() - timer.startTime;
     }
 }
 
