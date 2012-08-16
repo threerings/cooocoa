@@ -7,7 +7,6 @@
 #import "NSArray+OOOExtensions.h"
 #import "NSMutableArray+OOOExtensions.h"
 #import "NSString+OOOExtensions.h"
-#import "UIColor+OOOExtensions.h"
 
 // Utils
 #import "OOOBoxed.h"

@@ -45,14 +45,11 @@
 		229E2828155749A6001452E5 /* OOOUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E281D155749A6001452E5 /* OOOUtils.m */; };
 		229E2829155749A6001452E5 /* OOOWeightedArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E281E155749A6001452E5 /* OOOWeightedArray.h */; };
 		229E282A155749A6001452E5 /* OOOWeightedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E281F155749A6001452E5 /* OOOWeightedArray.m */; };
-		229E283015574E05001452E5 /* UIColor+OOOExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 229E282E15574E05001452E5 /* UIColor+OOOExtensions.h */; };
-		229E283115574E05001452E5 /* UIColor+OOOExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E282F15574E05001452E5 /* UIColor+OOOExtensions.m */; };
 		229E283415574E87001452E5 /* cooocoa_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 229E283315574E87001452E5 /* cooocoa_Prefix.pch */; };
 		22A87047156AEAE300101F6D /* OOOEasing.h in Headers */ = {isa = PBXBuildFile; fileRef = 22A87042156AEAE300101F6D /* OOOEasing.h */; };
 		22A87048156AEAE300101F6D /* OOOEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A87043156AEAE300101F6D /* OOOEasing.m */; };
 		22A8704A156AEAE300101F6D /* OOOPowerEaser.h in Headers */ = {isa = PBXBuildFile; fileRef = 22A87045156AEAE300101F6D /* OOOPowerEaser.h */; };
 		22A8704B156AEAE300101F6D /* OOOPowerEaser.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A87046156AEAE300101F6D /* OOOPowerEaser.m */; };
-		22E43A341558B4B6003A43B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E43A331558B4B6003A43B8 /* UIKit.framework */; };
 		22E43A861559BEE8003A43B8 /* OOOBoxed.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E43A841559BEE8003A43B8 /* OOOBoxed.h */; };
 		22E43A871559BEE8003A43B8 /* OOOBoxed.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E43A851559BEE8003A43B8 /* OOOBoxed.m */; };
 		22E7697A15575C8A006E96DB /* OOOFloatRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E7697615575C8A006E96DB /* OOOFloatRange.h */; };
@@ -81,7 +78,6 @@
 		225041B7155889B10014FA5D /* OOOTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOTypes.h; sourceTree = "<group>"; };
 		227F8BEC15DB0092005ADF63 /* OOOKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOKey.h; sourceTree = "<group>"; };
 		227F8BED15DB0092005ADF63 /* OOOKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOKey.m; sourceTree = "<group>"; };
-		227F8BF515DB37F4005ADF63 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		227F8BFB15DC3D07005ADF63 /* OOOProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOProfiler.h; sourceTree = "<group>"; };
 		227F8BFC15DC3D07005ADF63 /* OOOProfiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOProfiler.m; sourceTree = "<group>"; };
 		229E27B11557473D001452E5 /* libcooocoa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcooocoa.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,8 +110,6 @@
 		229E281E155749A6001452E5 /* OOOWeightedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOWeightedArray.h; sourceTree = "<group>"; };
 		229E281F155749A6001452E5 /* OOOWeightedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOWeightedArray.m; sourceTree = "<group>"; };
 		229E282B15574CF3001452E5 /* cooocoa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cooocoa.h; sourceTree = "<group>"; };
-		229E282E15574E05001452E5 /* UIColor+OOOExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+OOOExtensions.h"; sourceTree = "<group>"; };
-		229E282F15574E05001452E5 /* UIColor+OOOExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+OOOExtensions.m"; sourceTree = "<group>"; };
 		229E283315574E87001452E5 /* cooocoa_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cooocoa_Prefix.pch; sourceTree = "<group>"; };
 		22A87042156AEAE300101F6D /* OOOEasing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOEasing.h; sourceTree = "<group>"; };
 		22A87043156AEAE300101F6D /* OOOEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOEasing.m; sourceTree = "<group>"; };
@@ -143,7 +137,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22E43A341558B4B6003A43B8 /* UIKit.framework in Frameworks */,
 				229E27C31557473D001452E5 /* SenTestingKit.framework in Frameworks */,
 				229E27C61557473D001452E5 /* Foundation.framework in Frameworks */,
 				229E27C91557473D001452E5 /* libcooocoa.a in Frameworks */,
@@ -178,7 +171,6 @@
 			children = (
 				22E43A331558B4B6003A43B8 /* UIKit.framework */,
 				229E27B41557473D001452E5 /* Foundation.framework */,
-				227F8BF515DB37F4005ADF63 /* CoreGraphics.framework */,
 				229E27C21557473D001452E5 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
@@ -213,8 +205,6 @@
 				229E27FA155748C2001452E5 /* NSMutableArray+OOOExtensions.m */,
 				229E27FB155748C2001452E5 /* NSString+OOOExtensions.h */,
 				229E27FC155748C2001452E5 /* NSString+OOOExtensions.m */,
-				229E282E15574E05001452E5 /* UIColor+OOOExtensions.h */,
-				229E282F15574E05001452E5 /* UIColor+OOOExtensions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -298,7 +288,6 @@
 				229E2825155749A6001452E5 /* OOORandoms.h in Headers */,
 				229E2827155749A6001452E5 /* OOOUtils.h in Headers */,
 				229E2829155749A6001452E5 /* OOOWeightedArray.h in Headers */,
-				229E283015574E05001452E5 /* UIColor+OOOExtensions.h in Headers */,
 				229E283415574E87001452E5 /* cooocoa_Prefix.pch in Headers */,
 				22E7697A15575C8A006E96DB /* OOOFloatRange.h in Headers */,
 				22E7697C15575C8A006E96DB /* OOOIntRange.h in Headers */,
@@ -422,7 +411,6 @@
 				229E2826155749A6001452E5 /* OOORandoms.m in Sources */,
 				229E2828155749A6001452E5 /* OOOUtils.m in Sources */,
 				229E282A155749A6001452E5 /* OOOWeightedArray.m in Sources */,
-				229E283115574E05001452E5 /* UIColor+OOOExtensions.m in Sources */,
 				22E7697B15575C8A006E96DB /* OOOFloatRange.m in Sources */,
 				22E7697D15575C8A006E96DB /* OOOIntRange.m in Sources */,
 				222C963D1558812000ED42B1 /* OOORegistration.m in Sources */,
