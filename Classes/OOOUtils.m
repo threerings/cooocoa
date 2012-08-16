@@ -2,7 +2,7 @@
 // cooocoa - Copyright 2012 Three Rings Design
 
 #import "OOOUtils.h"
-#import <QuartzCore/QuartzCore.h>
+#import <mach/mach_time.h>
 
 id OOONSNullToNil (id obj) { return (obj == [NSNull null] ? nil : obj); }
 
@@ -15,8 +15,19 @@ NSComparisonResult OOOCompareInts (int a, int b) { return OOO_COMPARE_NUMBERS(a,
 NSComparisonResult OOOCompareFloats (float a, float b) { return OOO_COMPARE_NUMBERS(a, b); }
 NSComparisonResult OOOCompareDoubles (double a, double b) { return OOO_COMPARE_NUMBERS(a, b); }
 
+uint64_t OOOTimeNowMS () {
+    static mach_timebase_info_data_t sTimebaseInfo;
+    if (sTimebaseInfo.denom == 0) {
+        mach_timebase_info(&sTimebaseInfo);
+    }
+
+    // convert from absolute-time to nanos, and from nanos to millis
+    uint64_t time = mach_absolute_time();
+    return (time * (sTimebaseInfo.numer / sTimebaseInfo.denom * 1000000));
+}
+
 double OOOTimeNow () {
-    return CACurrentMediaTime();
+    return ((double) OOOTimeNowMS()) / 1000.0;
 }
 
 double OOOMeasureTime (void(^block)()) {

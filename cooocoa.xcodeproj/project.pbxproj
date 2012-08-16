@@ -17,7 +17,6 @@
 		227F8BEE15DB0092005ADF63 /* OOOKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 227F8BEC15DB0092005ADF63 /* OOOKey.h */; };
 		227F8BEF15DB0092005ADF63 /* OOOKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 227F8BED15DB0092005ADF63 /* OOOKey.m */; };
 		227F8BF615DB37F4005ADF63 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227F8BF515DB37F4005ADF63 /* CoreGraphics.framework */; };
-		227F8BF715DB3819005ADF63 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227F8BF315DB375E005ADF63 /* QuartzCore.framework */; };
 		227F8C1615DC4EB7005ADF63 /* OOOProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 227F8BFC15DC3D07005ADF63 /* OOOProfiler.m */; };
 		229E27B51557473D001452E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27B41557473D001452E5 /* Foundation.framework */; };
 		229E27C31557473D001452E5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E27C21557473D001452E5 /* SenTestingKit.framework */; };
@@ -85,7 +84,6 @@
 		225041B7155889B10014FA5D /* OOOTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOTypes.h; sourceTree = "<group>"; };
 		227F8BEC15DB0092005ADF63 /* OOOKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOKey.h; sourceTree = "<group>"; };
 		227F8BED15DB0092005ADF63 /* OOOKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOKey.m; sourceTree = "<group>"; };
-		227F8BF315DB375E005ADF63 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		227F8BF515DB37F4005ADF63 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		227F8BFB15DC3D07005ADF63 /* OOOProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOProfiler.h; sourceTree = "<group>"; };
 		227F8BFC15DC3D07005ADF63 /* OOOProfiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOProfiler.m; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227F8BF715DB3819005ADF63 /* QuartzCore.framework in Frameworks */,
 				22E43A341558B4B6003A43B8 /* UIKit.framework in Frameworks */,
 				227F8BF615DB37F4005ADF63 /* CoreGraphics.framework in Frameworks */,
 				229E27C31557473D001452E5 /* SenTestingKit.framework in Frameworks */,
@@ -188,7 +185,6 @@
 				22E43A331558B4B6003A43B8 /* UIKit.framework */,
 				229E27B41557473D001452E5 /* Foundation.framework */,
 				227F8BF515DB37F4005ADF63 /* CoreGraphics.framework */,
-				227F8BF315DB375E005ADF63 /* QuartzCore.framework */,
 				229E27C21557473D001452E5 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
