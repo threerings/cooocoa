@@ -3,11 +3,11 @@
 
 #import "OOOBoxed.h"
 
-#define OOO_DEFINE_BOXED(clazz, type) \
+#define OOO_DEFINE_BOXED(clazz, factoryName, type) \
     @implementation clazz  \
     @synthesize value;  \
-    + (clazz*)createWith:(type)val { return [[clazz alloc] initWithValue:val]; } \
-    + (clazz*)create { return [[clazz alloc] initWithValue:0]; } \
+    + (clazz*)factoryName##WithValue:(type)val { return [[clazz alloc] initWithValue:val]; } \
+    + (clazz*)factoryName { return [[clazz alloc] initWithValue:0]; } \
     - (id)initWithValue:(type)val { if ((self = [super init])) { value = val; } return self; } \
     - (id)copyWithZone:(NSZone*)zone { return [[clazz allocWithZone:zone] initWithValue:value]; } \
     - (NSUInteger)hash { return (NSUInteger)value; } \
@@ -18,9 +18,9 @@
     } \
     @end
 
-OOO_DEFINE_BOXED(OOOBoxedBool, BOOL);
-OOO_DEFINE_BOXED(OOOBoxedInt, int);
-OOO_DEFINE_BOXED(OOOBoxedLong, long);
-OOO_DEFINE_BOXED(OOOBoxedFloat, float);
-OOO_DEFINE_BOXED(OOOBoxedDouble, double);
-OOO_DEFINE_BOXED(OOOBoxedWeakRef, __weak id);
+OOO_DEFINE_BOXED(OOOBoxedBool, boxedBool, BOOL);
+OOO_DEFINE_BOXED(OOOBoxedInt, boxedInt, int);
+OOO_DEFINE_BOXED(OOOBoxedLong, boxedLong, long);
+OOO_DEFINE_BOXED(OOOBoxedFloat, boxedFloat, float);
+OOO_DEFINE_BOXED(OOOBoxedDouble, boxedDouble, double);
+OOO_DEFINE_BOXED(OOOBoxedWeakRef, boxedWeakRef, __weak id);
