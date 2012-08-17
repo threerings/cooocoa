@@ -41,6 +41,22 @@
     return nil;
 }
 
++ (id)findMin:(id<NSFastEnumeration>)collection withComparator:(NSComparator)comp {
+    id candidate = nil;
+    for (id obj in collection) {
+        if (candidate == nil || comp(obj, candidate) < 0) {
+            candidate = obj;
+        }
+    }
+    return candidate;
+}
+
++ (id)findMax:(id<NSFastEnumeration>)collection withComparator:(NSComparator)comp {
+    return [OOOCollections findMin:collection withComparator:^NSComparisonResult(id obj1, id obj2) {
+        return comp(obj2, obj1);
+    }];
+}
+
 + (id<NSFastEnumeration>)singleton:(id)object {
     return [NSArray arrayWithObject:object];
 }

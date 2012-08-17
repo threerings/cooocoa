@@ -8,6 +8,14 @@
 - (NSMutableArray*)map:(id (^)(id object))transformer;
 - (id)findObject:(BOOL (^)(id object))pred;
 
+/// Returns the smallest of the objects in the array, according to the ordering produced by comp
+/// (does not sort the array)
+- (id)min:(NSComparator)comp;
+
+/// Returns the largest of the objects in the array, according to the ordering produced by comp
+/// (does not sort the array)
+- (id)max:(NSComparator)comp;
+
 /**
  * Performs a binary search, attempting to locate the specified
  * object. The array must be in the sort order defined by the supplied

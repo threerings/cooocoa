@@ -23,6 +23,14 @@
     return [OOOCollections findObject:self pred:pred];
 }
 
+- (id)min:(NSComparator)comp {
+    return [OOOCollections findMin:self withComparator:comp];
+}
+
+- (id)max:(NSComparator)comp {
+    return [OOOCollections findMax:self withComparator:comp];
+}
+
 - (int)binarySearch:(id)object offset:(int)offset length:(int)length comp:(NSComparator)comp {
     int low = offset;
     int high = offset + length - 1;

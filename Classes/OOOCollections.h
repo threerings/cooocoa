@@ -21,6 +21,14 @@
 /// or nil if no such object exists.
 + (id)findObject:(id<NSFastEnumeration>)collection pred:(BOOL(^)(id object))pred;
 
+/// Returns the smallest of the objects in the collection, according to the ordering produced by
+/// 'comp' (does not sort the collection)
++ (id)findMin:(id<NSFastEnumeration>)collection withComparator:(NSComparator)comp;
+
+/// Returns the smallest of the objects in the collection, according to the ordering produced by
+/// 'comp' (does not sort the collection)
++ (id)findMax:(id<NSFastEnumeration>)collection withComparator:(NSComparator)comp;
+
 /// Returns an NSEnumerator that will enumerate over a single object
 + (id<NSFastEnumeration>)singleton:(id)object;
 
