@@ -15,19 +15,21 @@ NSComparisonResult OOOCompareInts (int a, int b) { return OOO_COMPARE_NUMBERS(a,
 NSComparisonResult OOOCompareFloats (float a, float b) { return OOO_COMPARE_NUMBERS(a, b); }
 NSComparisonResult OOOCompareDoubles (double a, double b) { return OOO_COMPARE_NUMBERS(a, b); }
 
-uint64_t OOOTimeNowMS () {
-    static mach_timebase_info_data_t sTimebaseInfo;
-    if (sTimebaseInfo.denom == 0) {
-        mach_timebase_info(&sTimebaseInfo);
+double OOOTimeNowMS () {
+    static double ABSOLUTE_TO_MILLIS = 0;
+    if (ABSOLUTE_TO_MILLIS == 0) {
+        mach_timebase_info_data_t timebaseInfo;
+        mach_timebase_info(&timebaseInfo);
+        // timeBaseInfo takes us from absolute time to nanos.
+        // divide by 1M to get to millis.
+        ABSOLUTE_TO_MILLIS = ((double) (timebaseInfo.numer / timebaseInfo.denom)) / 1000000.0;
     }
 
-    // convert from absolute-time to nanos, and from nanos to millis
-    uint64_t time = mach_absolute_time();
-    return (time * (sTimebaseInfo.numer / sTimebaseInfo.denom * 1000000));
+    return mach_absolute_time() * ABSOLUTE_TO_MILLIS;
 }
 
 double OOOTimeNow () {
-    return ((double) OOOTimeNowMS()) / 1000.0;
+    return OOOTimeNowMS() / 1000.0;
 }
 
 double OOOMeasureTime (void(^block)()) {

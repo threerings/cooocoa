@@ -10,7 +10,7 @@ NSComparisonResult OOOCompareFloats (float a, float b);
 NSComparisonResult OOOCompareDoubles (double a, double b);
 
 /// Current time in millis
-uint64_t OOOTimeNowMS ();
+double OOOTimeNowMS ();
 /// Current time in seconds
 double OOOTimeNow ();
 
