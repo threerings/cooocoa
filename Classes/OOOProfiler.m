@@ -7,8 +7,8 @@
 @interface OOOPerfTimer : NSObject
 @property (nonatomic,assign) int timesRun;
 @property (nonatomic,assign) int concurrentRunCount;
-@property (nonatomic,assign) double totalTime;
-@property (nonatomic,assign) double startTime;
+@property (nonatomic,assign) double totalTimeMs;
+@property (nonatomic,assign) double startTimeMs;
 
 + (void)startTimer:(NSString*)name;
 + (void)stopTimer:(NSString*)name;
@@ -22,14 +22,14 @@ static NSMutableDictionary* _timers;
     OOOPerfTimer* timer = [OOOPerfTimer timerNamed:name];
     timer.timesRun++;
     if (timer.concurrentRunCount++ == 0) {
-        timer.startTime = OOOTimeNow();
+        timer.startTimeMs = OOOTimeNowMS();
     }
 }
 
 + (void)stopTimer:(NSString*)name {
     OOOPerfTimer* timer = [OOOPerfTimer timerNamed:name];
     if (timer.concurrentRunCount > 0 && --timer.concurrentRunCount == 0) {
-        timer.totalTime += OOOTimeNow() - timer.startTime;
+        timer.totalTimeMs += OOOTimeNowMS() - timer.startTimeMs;
     }
 }
 
@@ -66,12 +66,12 @@ static NSMutableDictionary* _timers;
 + (NSString*)statsForSection:(NSString*)name {
     static NSString* const STATS_FORMAT = @"* %@"
         "\t\tTimes run: %d"
-        "\tTotal time: %g"
-        "\tAvg time: %g";
+        "\tTotal (ms): %g"
+        "\tAvg (ms): %g";
     
     OOOPerfTimer* timer = [OOOPerfTimer timerNamed:name];
     return [NSString stringWithFormat:STATS_FORMAT,
-            name, timer.timesRun, timer.totalTime, timer.totalTime / (float) timer.timesRun];
+            name, timer.timesRun, timer.totalTimeMs, timer.totalTimeMs / (float) timer.timesRun];
 }
 
 - (id)initWithName:(NSString*)name {
