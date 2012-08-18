@@ -9,7 +9,7 @@
 #import "NSString+OOOExtensions.h"
 
 // Utils
-#import "OOOBoxed.h"
+#import "OOOBoxedWeakRef.h"
 #import "OOOCollections.h"
 #import "OOOEasing.h"
 #import "OOOEnum.h"
