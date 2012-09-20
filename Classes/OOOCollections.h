@@ -29,7 +29,4 @@
 /// 'comp' (does not sort the collection)
 + (id)findMax:(id<NSFastEnumeration>)collection withComparator:(NSComparator)comp;
 
-/// Returns an NSEnumerator that will enumerate over a single object
-+ (id<NSFastEnumeration>)singleton:(id)object;
-
 @end

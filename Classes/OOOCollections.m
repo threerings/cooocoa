@@ -57,8 +57,4 @@
     }];
 }
 
-+ (id<NSFastEnumeration>)singleton:(id)object {
-    return [NSArray arrayWithObject:object];
-}
-
 @end
