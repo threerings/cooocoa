@@ -37,7 +37,7 @@ static NSMutableDictionary* _timers;
     if (_timers == nil) {
         _timers = [[NSMutableDictionary alloc] init];
     }
-    OOOPerfTimer* timer = [_timers objectForKey:name];
+    OOOPerfTimer* timer = _timers[name];
     if (timer == nil) {
         timer = [[OOOPerfTimer alloc] init];
         _timers[name] = timer;

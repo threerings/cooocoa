@@ -730,7 +730,7 @@ static xmlChar* SplitQNameReverse(const xmlChar* qname, xmlChar **prefix) {
       if (namespaces) {
         // the dictionary keys are prefixes; the values are URIs
         for (NSString* prefix in namespaces) {
-          NSString* uri = [namespaces objectForKey:prefix];
+          NSString* uri = namespaces[prefix];
 
           xmlChar* prefixChars = (xmlChar*) [prefix UTF8String];
           xmlChar* uriChars = (xmlChar*) [uri UTF8String];
@@ -1516,7 +1516,7 @@ static xmlChar* SplitQNameReverse(const xmlChar* qname, xmlChar **prefix) {
   if (nodeToFix->ns != NULL) {
 
     NSValue* currNS = [NSValue valueWithPointer:nodeToFix->ns];
-    NSValue* replacementNS = [nsMap objectForKey:currNS];
+    NSValue* replacementNS = nsMap[currNS];
 
     if (replacementNS != nil) {
       xmlNsPtr replaceNSPtr = (xmlNsPtr)[replacementNS pointerValue];
