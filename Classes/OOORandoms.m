@@ -129,7 +129,7 @@
 }
 
 - (id)getObject:(NSArray*)array {
-    return (array.count > 0 ? [array objectAtIndex:[self getInt:array.count]] : nil);
+    return (array.count > 0 ? array[[self getInt:array.count]] : nil);
 }
 
 - (int)getDiceRoll:(int)numDice d:(int)numFaces {

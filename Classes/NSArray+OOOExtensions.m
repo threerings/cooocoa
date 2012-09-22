@@ -36,7 +36,7 @@
     int high = offset + length - 1;
     while (low <= high) {
         int mid = ((unsigned int)low + (unsigned int)high) >> 1;
-        id midVal = [self objectAtIndex:mid];
+        id midVal = self[mid];
         int cmp = comp(midVal, object);
         if (cmp < 0) {
             low = mid + 1;

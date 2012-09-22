@@ -36,7 +36,7 @@ static NSMutableDictionary* keyDict () {
         key = [dict objectForKey:string];
         if (key == nil) {
             key = [[OOOKeyImpl alloc] initWithString:string];
-            [dict setObject:key forKey:string];
+            dict[string] = key;
         }
     }
     return key;

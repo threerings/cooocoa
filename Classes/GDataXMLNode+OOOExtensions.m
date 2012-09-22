@@ -134,10 +134,10 @@
 - (GDataXMLElement*)getChild:(NSString*)path {
     NSArray* els = [NSArray arrayWithObject:self];
     for (NSString* name in [path componentsSeparatedByString:@"/"]) {
-        els = [[els objectAtIndex:0] elementsForName:name];
+        els = [els[0] elementsForName:name];
         if ([els count] > 1 || [els count] == 0) return nil;
     }
-    return [els objectAtIndex:0];
+    return els[0];
 }
 
 - (GDataXMLElement*)requireChild:(NSString*)path {
@@ -151,7 +151,7 @@
             @throw [GDataXMLException withElement:current
                 reason:@"No child named '%@' in path '%@'", name, path];
         }
-        current = [els objectAtIndex:0];
+        current = els[0];
     }
     return current;
 }
