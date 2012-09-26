@@ -6,6 +6,7 @@
 // Categories
 #import "NSArray+OOOExtensions.h"
 #import "NSMutableArray+OOOExtensions.h"
+#import "NSMutableSet+OOOExtensions.h"
 #import "NSString+OOOExtensions.h"
 
 // Utils

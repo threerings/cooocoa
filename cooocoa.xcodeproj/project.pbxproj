@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220996C11613B9E80007F316 /* NSMutableSet+OOOExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 220996BF1613B9E80007F316 /* NSMutableSet+OOOExtensions.h */; };
+		220996C21613B9E80007F316 /* NSMutableSet+OOOExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 220996C01613B9E80007F316 /* NSMutableSet+OOOExtensions.m */; };
 		222C963C1558812000ED42B1 /* OOORegistration.h in Headers */ = {isa = PBXBuildFile; fileRef = 222C963A1558812000ED42B1 /* OOORegistration.h */; };
 		222C963D1558812000ED42B1 /* OOORegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = 222C963B1558812000ED42B1 /* OOORegistration.m */; };
 		2230242015B4B26C00E10499 /* OOOMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 2230241E15B4B26C00E10499 /* OOOMath.h */; };
@@ -69,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		220996BF1613B9E80007F316 /* NSMutableSet+OOOExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableSet+OOOExtensions.h"; sourceTree = "<group>"; };
+		220996C01613B9E80007F316 /* NSMutableSet+OOOExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableSet+OOOExtensions.m"; sourceTree = "<group>"; };
 		222C963A1558812000ED42B1 /* OOORegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOORegistration.h; sourceTree = "<group>"; };
 		222C963B1558812000ED42B1 /* OOORegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOORegistration.m; sourceTree = "<group>"; };
 		2230241E15B4B26C00E10499 /* OOOMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOMath.h; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 				229E27F8155748C2001452E5 /* NSArray+OOOExtensions.m */,
 				229E27F9155748C2001452E5 /* NSMutableArray+OOOExtensions.h */,
 				229E27FA155748C2001452E5 /* NSMutableArray+OOOExtensions.m */,
+				220996BF1613B9E80007F316 /* NSMutableSet+OOOExtensions.h */,
+				220996C01613B9E80007F316 /* NSMutableSet+OOOExtensions.m */,
 				229E27FB155748C2001452E5 /* NSString+OOOExtensions.h */,
 				229E27FC155748C2001452E5 /* NSString+OOOExtensions.m */,
 			);
@@ -299,6 +305,7 @@
 				2231637715B4FA7900F85F32 /* OOOFlags.h in Headers */,
 				227F8BEE15DB0092005ADF63 /* OOOKey.h in Headers */,
 				22AE42FD15DF199F0024D336 /* OOOBoxedWeakRef.h in Headers */,
+				220996C11613B9E80007F316 /* NSMutableSet+OOOExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +428,7 @@
 				227F8BEF15DB0092005ADF63 /* OOOKey.m in Sources */,
 				227F8C1615DC4EB7005ADF63 /* OOOProfiler.m in Sources */,
 				22AE42FE15DF199F0024D336 /* OOOBoxedWeakRef.m in Sources */,
+				220996C21613B9E80007F316 /* NSMutableSet+OOOExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
