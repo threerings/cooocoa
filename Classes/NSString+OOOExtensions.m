@@ -20,7 +20,7 @@
     NSScanner* scanner = [[NSScanner alloc] initWithString:self];
     double retVal;
     if (![scanner scanDouble:&retVal] || !scanner.isAtEnd) {
-        [NSException raise:NSGenericException format:@"%@ could not be converted to a double", self];
+        [NSException raise:NSGenericException format:@"'%@' could not be converted to a double", self];
     }
 
     return retVal;
@@ -30,7 +30,7 @@
     NSScanner* scanner = [[NSScanner alloc] initWithString:self];
     float retVal;
     if (![scanner scanFloat:&retVal] || !scanner.isAtEnd) {
-        [NSException raise:NSGenericException format:@"%@ could not be converted to a float", self];
+        [NSException raise:NSGenericException format:@"'%@' could not be converted to a float", self];
     }
 
     return retVal;
@@ -40,7 +40,7 @@
     NSScanner* scanner = [[NSScanner alloc] initWithString:self];
     int retVal;
     if (![scanner scanInt:&retVal] || !scanner.isAtEnd) {
-        [NSException raise:NSGenericException format:@"%@ could not be converted to a int", self];
+        [NSException raise:NSGenericException format:@"'%@' could not be converted to a int", self];
     }
 
     return retVal;
@@ -53,7 +53,7 @@
     } else if ([lowercase isEqualToString:@"false"] || [lowercase isEqualToString:@"no"]) {
         return NO;
     } else {
-        [NSException raise:NSGenericException format:@"%@ could not be converted to a BOOL", self];
+        [NSException raise:NSGenericException format:@"'%@' could not be converted to a BOOL", self];
     }
 
     return NO;
