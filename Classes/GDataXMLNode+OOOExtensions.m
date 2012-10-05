@@ -131,6 +131,15 @@
     return [self enumAttribute:name type:type defaultVal:nil required:YES];
 }
 
+- (GDataXMLElement*)requireSingleChild {
+    NSArray* elements = self.elements;
+    if (elements.count != 1) {
+        @throw [GDataXMLException withElement:self
+           reason:@"Expected exactly 1 child element (found %d)", elements.count];
+    }
+    return elements[0];
+}
+
 - (GDataXMLElement*)getChild:(NSString*)path {
     NSArray* els = [NSArray arrayWithObject:self];
     for (NSString* name in [path componentsSeparatedByString:@"/"]) {

@@ -29,6 +29,7 @@
 - (id)enumAttribute:(NSString*)name type:(Class)type defaultVal:(OOOEnum*)defaultVal;
 - (id)enumAttribute:(NSString*)name type:(Class)type;
 
+- (GDataXMLElement*)requireSingleChild;
 - (GDataXMLElement*)requireChild:(NSString*)path;
 - (GDataXMLElement*)getChild:(NSString*)path;
 
