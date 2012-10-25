@@ -1,9 +1,9 @@
 //
 // cooocoa - Copyright 2012 Three Rings Design
 
-#import "OOORandoms.h"
-
 /*
+ OOODefaultRNG adapted from:
+ 
  A C-program for MT19937, with initialization improved 2002/1/26.
  Coded by Takuji Nishimura and Makoto Matsumoto.
 
@@ -48,52 +48,30 @@
  email: m-mat @ math.sci.hiroshima-u.ac.jp (remove space)
  */
 
-#include <stdio.h>
+#import "OOORandoms.h"
 
-/* Period parameters */
-#define N 624
-#define M 397
-#define MATRIX_A 0x9908b0dfUL   /* constant vector a */
-#define UPPER_MASK 0x80000000UL /* most significant w-r bits */
-#define LOWER_MASK 0x7fffffffUL /* least significant r bits */
-
-@interface OOORandoms () {
-    unsigned int _seed;
-    unsigned long mt[N]; /* the array for the state vector  */
-    int mti;//=N+1; /* mti==N+1 means mt[N] is not initialized */
-}
-- (void)init_genrand:(unsigned long)s;
-- (unsigned long)genrand_int32;
-- (long)genrand_int31;
-- (double)genrand_real1;
-- (double)genrand_real2;
-- (double)genrand_real3;
-- (double)gendrand_res53;
-@end
+// 1/(2^32)
+static const double OOO_MAXLONG_DIVISOR = 1.0/4294967296.0;
 
 @implementation OOORandoms
 
-@synthesize seed = _seed;
+- (id)init {
+    return [self initWithRng:[[OOODefaultRng alloc] init]];
+}
 
 - (id)initWithSeed:(unsigned int)seed {
+    return [self initWithRng:[[OOODefaultRng alloc] initWithSeed:seed]];
+}
+
+- (id)initWithRng:(id<OOORng>)rng {
     if ((self = [super init])) {
-        mti = N+1;
-        [self setSeed:seed];
+        _rng = rng;
     }
     return self;
 }
 
-- (id)init {
-    return [self initWithSeed:(unsigned int)time(0)];
-}
-
-- (void)setSeed:(unsigned int)seed {
-    _seed = seed;
-    [self init_genrand:seed];
-}
-
 - (int)getInt:(int)high {
-    return (int) ([self genrand_int32] % (unsigned long) high);
+    return (int) ([_rng genLong] % (unsigned long) high);
 }
 
 - (int)getIntLow:(int)low high:(int)high {
@@ -101,7 +79,7 @@
 }
 
 - (unsigned int)getUint:(unsigned int)high {
-    return (unsigned int) ([self genrand_int32] % (unsigned long) high);
+    return (unsigned int) ([_rng genLong] % (unsigned long) high);
 }
 
 - (unsigned int)getUintLow:(unsigned int)low high:(unsigned int)high {
@@ -109,15 +87,15 @@
 }
 
 - (float)getFloat:(float)high {
-    return [self genrand_real2] * high;
+    return [self nextDouble] * high;
 }
 
 - (float)getFloatLow:(float)low high:(float)high {
-    return low + ([self genrand_real2] * (high - low));
+    return low + ([self nextDouble] * (high - low));
 }
 
 - (BOOL)getBool {
-    return [self genrand_int32] % 2 != 0;
+    return [_rng genLong] % 2 != 0;
 }
 
 - (BOOL)getChance:(int)n {
@@ -138,6 +116,42 @@
         sum += [self getIntLow:1 high:numFaces + 1];
     }
     return sum;
+}
+
+- (double)nextDouble {
+    return [_rng genLong] * OOO_MAXLONG_DIVISOR;
+}
+
+@end
+
+#include <stdio.h>
+
+/* Period parameters */
+#define N 624
+#define M 397
+#define MATRIX_A 0x9908b0dfUL   /* constant vector a */
+#define UPPER_MASK 0x80000000UL /* most significant w-r bits */
+#define LOWER_MASK 0x7fffffffUL /* least significant r bits */
+
+@implementation OOODefaultRng {
+    unsigned long mt[N]; /* the array for the state vector  */
+    int mti;//=N+1; /* mti==N+1 means mt[N] is not initialized */
+}
+
+- (id)init {
+    return [self initWithSeed:(unsigned long)time(0)];
+}
+
+- (id)initWithSeed:(unsigned long)s {
+    if ((self = [super init])) {
+        mti = N+1;
+        [self init_genrand:s];
+    }
+    return self;
+}
+
+- (unsigned long)genLong {
+    return [self genrand_int32];
 }
 
 /* initializes mt[N] with a seed */
